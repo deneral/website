@@ -1,0 +1,67 @@
+/* ============================================================
+   BASE — reset, variables, typography, shared utilities
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0d0c0b;
+  --bg2:     #141310;
+  --surface: #1a1815;
+  --border:  rgba(255,255,255,0.07);
+  --text:    #e8e2d9;
+  --muted:   rgba(232,226,217,0.45);
+  --accent:  #c9a96e;
+  --green:   #6dbf7e;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+section { padding: 7rem 3rem; }
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: var(--border);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ── Mobile base ── */
+@media (max-width: 768px) {
+  section { padding: 5rem 1.5rem; }
+}

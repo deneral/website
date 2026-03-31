@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Heartroot Vault",
+    "tag":   "Sourcebook Spread — Ancient Forest",
+    "file":  "heartroot-vault",
+    "alt":   "A vast ancient root system filling a cavern, a lone figure holding a golden light within",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/heartroot-vault.jpg",
+        "text":  "Initial compositional study — exploring the tension between the vast root architecture and the lone figure carrying the only light source in the cavern."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/heartroot-vault.jpg",
+        "text":  "Finished spread. Warm amber tones from the lantern push against cool cave shadows. Root forms were designed to feel structural — like a living cathedral."
+      }
+    ]
+  },
+  {
+    "title": "Whispers From The Mireglass",
+    "tag":   "Land Card Art — Swamp",
+    "file":  "whispers-from-the-mireglass",
+    "alt":   "A toxic swamp at night — gnarled dead trees surrounding a glowing green pool",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/whispers-from-the-mireglass.jpg",
+        "text":  "Compositional sketches testing the glowing pool as central focal point versus a framed mid-ground approach with silhouetted dead trees."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/whispers-from-the-mireglass.jpg",
+        "text":  "Desaturated greens and sickly luminance from the pool. The dead tree silhouettes were designed to read as strong graphic shapes at 2\" card scale."
+      }
+    ]
+  },
+  {
+    "title": "Paradox Hollow",
+    "tag":   "Land Card Art — Desert / Portal",
+    "file":  "paradox-hollow",
+    "alt":   "A shattered portal arch in an arid desert wasteland under a pale sky",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/paradox-hollow.jpg",
+        "text":  "Explored three angles: portal as horizon-breaker, portal as foreground frame, and worm's-eye low-angle. The horizon-breaker version best communicated scale."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/paradox-hollow.jpg",
+        "text":  "Bleached ochre palette with a pale, haze-washed sky. The shattered arch pieces were scattered deliberately — implying a catastrophic event rather than calm abandonment."
+      }
+    ]
+  },
+  {
+    "title": "Mana Breach",
+    "tag":   "Land Card Art — Arcane Structure",
+    "file":  "mana-breach",
+    "alt":   "An arcane stone keep overrun with glowing magical tendrils and a mana wheel",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/mana-breach.jpg",
+        "text":  "Early thumbnails focused on the mana wheel as the dominant shape, with the stone architecture playing a secondary, engulfed role."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/mana-breach.jpg",
+        "text":  "Cool stone greys contrasting with the warm amber-gold of the mana surge. The tendrils were rendered to feel both organic and mechanical — uncontrolled energy finding old paths."
+      }
+    ]
+  },
+  {
+    "title": "The Ash Monolith",
+    "tag":   "Land Card Art — Plains / Badlands",
+    "file":  "ash-monolith",
+    "alt":   "A glowing blue crystal spire rising from a desert plain at sunset with mesas in the distance",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/ash-monolith.jpg",
+        "text":  "Testing the spire against different sky conditions — stormy, clear dusk, and haze. The sunset palette best justified the crystal's inner glow as a counterpoint light."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/ash-monolith.jpg",
+        "text":  "Warm burnt sienna mesas against a deep violet-orange horizon. The cold blue of the crystal was kept saturated to create a focal tension against the warm surroundings."
+      }
+    ]
+  },
+  {
+    "title": "Knell of the Mire",
+    "tag":   "Module Art — Flooded Ruins",
+    "file":  "knell-of-the-mire",
+    "alt":   "A flooded ancient stone causeway in a misty swamp, a lone boatman visible in the distance",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/knell-of-the-mire.jpg",
+        "text":  "The causeway perspective and the boatman's placement were tested across several thumbnails — the figure needed to read immediately as a narrative anchor but not dominate the environment."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/knell-of-the-mire.jpg",
+        "text":  "Layered atmospheric haze in cool grey-greens. The causeway's submerged stones were lit with a diffuse ambient bounce from the water — implying depth without high contrast."
+      }
+    ]
+  },
+  {
+    "title": "The Stonespire Conclave",
+    "tag":   "Sourcebook Spread — Forest Shrine",
+    "file":  "stonespire-conclave",
+    "alt":   "An ancient gnarled tree shrine glowing with green energy, stone steps leading up to its door",
+    "stages": [
+      {
+        "label": "Thumbnail",
+        "image": "assets/illustrations/stonespire-conclave.jpg",
+        "text":  "Explored whether the shrine should feel welcoming or foreboding. The upward-leading stone steps with a warm inner glow pushed the mood toward sacred rather than dangerous."
+      },
+      {
+        "label": "Final",
+        "image": "assets/illustrations/stonespire-conclave.jpg",
+        "text":  "Deep forest greens with a pulsing interior light. The gnarled tree was designed to appear as both architectural element and living entity — the boundary between natural and constructed deliberately blurred."
+      }
+    ]
+  }
+]

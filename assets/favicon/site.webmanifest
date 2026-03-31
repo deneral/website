@@ -1,0 +1,22 @@
+{
+  "name": "Paolo Internò",
+  "short_name": "Paolo Internò",
+  "icons": [
+    {
+      "src": "web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#0d0c0b",
+  "background_color": "#0d0c0b",
+  "display": "standalone",
+  "start_url": "./"
+}
