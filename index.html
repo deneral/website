@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paolo Internò — TTRPG & TCG Environment Illustrator for Hire</title>
+  <title>Paolo Internò - Illustrator and Concept artist</title>
   <meta name="description" content="Paolo Internò is a freelance environment and landscape illustrator and concept artist based in Italy, specialising in TTRPG, TCG, and tabletop game art commissions. World-building, card art, and dungeon environments for indie and mid-size publishers." />
   <meta name="keywords" content="TTRPG illustrator for hire, TCG illustrator, tabletop RPG art commission, fantasy environment art, landscape illustration freelance, concept artist Italy, card game art commission, indie TTRPG publisher art, freelance game illustrator Europe, Paolo Internò" />
   <meta name="author" content="Paolo Internò" />
@@ -11,13 +11,13 @@
   <link rel="canonical" href="https://www.paolointerno.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paolointerno.com/" />
-  <meta property="og:title" content="Paolo Internò — TTRPG & TCG Environment Illustrator" />
+  <meta property="og:title" content="Paolo Internò - Illustrator and Concept artist" />
   <meta property="og:description" content="Freelance environment illustrator and concept artist available for TTRPG, TCG, and tabletop game art commissions. Based in Italy." />
   <meta property="og:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Paolo Internò Illustration" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Paolo Internò — TTRPG & TCG Environment Illustrator" />
+  <meta name="twitter:title" content="Paolo Internò - Illustrator and Concept artist" />
   <meta name="twitter:description" content="Freelance environment illustrator and concept artist for TTRPG, TCG and tabletop game art commissions." />
   <meta name="twitter:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
@@ -117,7 +117,7 @@
     .contact-block{margin-bottom:1.6rem}
 
     .contact-status{
-      display:flex;align-items:center;gap:8px;
+      display:flex;align-items:center;justify-content:center;gap:8px;
       font-size:11px;color:var(--ink-dim);
       margin-bottom:1rem;letter-spacing:.02em;
     }
@@ -289,7 +289,7 @@
     .lightbox.open{opacity:1;pointer-events:all}
     .lightbox-backdrop{position:absolute;inset:0;background:rgba(14,13,12,.95);cursor:zoom-out}
     .lightbox-inner{position:relative;z-index:1;display:flex;width:100%;height:100%;align-items:stretch}
-    .lightbox-img-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:3.5rem 2.5rem 3.5rem 3rem;min-width:0}
+    .lightbox-img-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:3.5rem 2.5rem 3.5rem 3rem;min-width:0;position:relative}
     .lightbox-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px;box-shadow:0 28px 70px rgba(0,0,0,.75);transition:opacity .2s ease,transform .2s ease}
     .lightbox-img-wrap img.swapping{opacity:0;transform:scale(.97)}
     .lightbox-panel{width:255px;flex-shrink:0;background:var(--paper-mid);border-left:1px solid var(--paper-dark);display:flex;flex-direction:column;padding:2.5rem 1.8rem 2rem}
@@ -313,39 +313,51 @@
     .lightbox-nav-btn svg{width:12px;height:12px}
 
 
+    .lightbox-close-mobile{display:none}
+
+    /* Lightbox click-zone navigation — sits over the image */
+    .lb-click-prev,.lb-click-next{
+      position:absolute;top:0;bottom:0;width:50%;z-index:3;
+    }
+    .lb-click-prev{left:0;cursor:w-resize}
+    .lb-click-next{right:0;cursor:e-resize}
+
     /* ── Mobile ── */
     @media(max-width:768px){
       .site{grid-template-columns:1fr}
 
+      /* Sidebar: flex column, hero pushed to bottom via order */
       .sidebar{
         position:relative;height:auto;border-right:none;
         border-bottom:1px solid var(--paper-dark);
-        padding:0 0 1.8rem;overflow:visible;background:transparent;
+        padding:0 0 0;overflow:visible;background:var(--paper);
+        display:flex;flex-direction:column;
       }
       .sidebar::after{display:none}
 
-      /* Hero: image on right, gradient+text on left */
+      /* Hero goes last visually */
       .sidebar-hero-wrap{
-        display:block;position:relative;width:100%;height:220px;overflow:hidden;
+        display:block;order:2;position:relative;width:100%;height:220px;overflow:hidden;
       }
       .sidebar-hero-img{
-        position:absolute;top:0;right:0;width:65%;height:100%;
-        object-fit:cover;object-position:center 25%;
+        width:100%;height:100%;object-fit:cover;object-position:center 25%;
+        display:block;
       }
       .sidebar-hero-gradient{
         position:absolute;inset:0;
-        background:linear-gradient(to right,var(--paper) 30%,rgba(39,38,36,.75) 58%,transparent 100%);
+        background:linear-gradient(to bottom,var(--paper) 0%,transparent 50%);
         pointer-events:none;
       }
-      .sidebar-hero-name{
-        position:absolute;bottom:1.2rem;left:1.4rem;z-index:2;
-      }
-      .sidebar-hero-name .sig-wrap img{max-width:160px}
-      .sidebar-hero-name .sig-fallback{font-size:18px}
-      .sidebar-text-content .sig-wrap{display:none}
-      .sidebar-text-content .role{display:none}
+      .sidebar-hero-name{display:none}
 
-      .sidebar-text-content{padding:1.2rem 1.4rem 0;z-index:1}
+      /* Content goes first */
+      .sidebar-text-content{
+        order:1;padding:1.4rem 1.4rem 1.8rem;
+      }
+      .sidebar-text-content .sig-wrap{display:block}
+      .sidebar-text-content .sig-wrap img{max-width:180px}
+      .sidebar-text-content .role{display:block}
+
       .sidebar-caption-area{display:none !important}
 
       /* Gallery: single column */
@@ -354,21 +366,48 @@
       .gallery-row{flex-direction:column;height:auto}
       .gallery-item{flex:none !important;width:100% !important;height:230px !important}
 
-      .lightbox-inner{flex-direction:column}
-      .lightbox-img-wrap{flex:0 0 auto;padding:3rem 1rem 1rem;height:52vh}
-      .lightbox-panel{
-        width:100%;border-left:none;border-top:1px solid var(--paper-dark);
-        flex:1;overflow-y:auto;padding:1.2rem 1.4rem 1.5rem;
-        flex-direction:row;flex-wrap:wrap;align-content:flex-start;gap:0;
+      /* Lightbox: image centered, panel fixed to bottom */
+      .lightbox-inner{
+        flex-direction:column;
       }
-      .lightbox-counter,.lightbox-title,.lightbox-meta,.lightbox-desc,.lightbox-divider,.lightbox-nav{width:100%}
+      .lightbox-img-wrap{
+        flex:1;
+        padding:3.5rem 1rem 1rem;
+        height:auto;
+        display:flex;align-items:center;justify-content:center;
+      }
+      .lightbox-panel{
+        position:fixed;bottom:0;left:0;right:0;
+        width:100%;border-left:none;border-top:1px solid var(--paper-dark);
+        background:var(--paper-mid);
+        padding:1rem 1.4rem 1.2rem;
+        display:flex;flex-direction:column;gap:.5rem;
+        z-index:10;
+      }
+      .lightbox-counter{font-size:9px;order:1}
+      .lightbox-title{font-size:16px;margin-bottom:0;order:2}
+      .lightbox-meta{margin-bottom:0;order:3}
+      .lightbox-close-mobile{
+        display:block;order:4;
+        background:transparent;border:none;cursor:pointer;
+        text-align:left;font-family:var(--font-sans);
+        font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+        color:var(--ink-dim);padding:6px 0;
+        transition:color var(--tr);
+      }
+      .lightbox-close-mobile:hover{color:var(--ink)}
+      .lightbox-desc{font-size:12px;line-height:1.6;order:5;
+        display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+      .lightbox-divider{display:none}
+      .lightbox-nav{order:6}
+      .lightbox-counter,.lightbox-title,.lightbox-meta,.lightbox-desc,.lightbox-nav,.lightbox-close-mobile{width:100%}
 
       .thumb-tool{bottom:1rem;right:1rem;left:1rem;max-width:none}
     }
 
     @media(max-width:480px){
       .gallery-item{height:200px !important}
-      .lightbox-img-wrap{height:45vh;padding-top:3.5rem}
+      .sidebar-hero-wrap{height:180px}
     }
   </style>
 </head>
@@ -379,11 +418,15 @@
   <div class="lightbox-backdrop" id="lbBackdrop"></div>
   <button class="lightbox-close" id="lbClose" aria-label="Close">&#x2715;</button>
   <div class="lightbox-inner">
-    <div class="lightbox-img-wrap"><img id="lbImg" src="" alt="" /></div>
+    <div class="lightbox-img-wrap" id="lbImgWrap"><img id="lbImg" src="" alt="" />
+      <div class="lb-click-prev" id="lbClickPrev"></div>
+      <div class="lb-click-next" id="lbClickNext"></div>
+    </div>
     <div class="lightbox-panel">
       <div class="lightbox-counter" id="lbCounter">1 / 12</div>
       <div class="lightbox-title" id="lbTitle"></div>
       <div class="lightbox-meta" id="lbMeta"></div>
+      <button class="lightbox-close-mobile" id="lbCloseMobile" aria-label="Close">&#x2715; Close</button>
       <div class="lightbox-desc" id="lbDesc"></div>
       <div class="lightbox-divider"></div>
       <div class="lightbox-nav">
@@ -455,10 +498,10 @@
           <div class="contact-email-label">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,7 12,14 22,7"/></svg>
           </div>
-          <a class="contact-email-link" href="mailto:studio@paolointerno.com">studio@paolointerno.com</a>
+          <a class="contact-email-link" href="/cdn-cgi/l/email-protection#6e1d1a1b0a07012e1e0f01020107001a0b1c0001400d0103"><span class="__cf_email__" data-cfemail="43303736272a2c0333222c2f2c2a2d3726312d2c6d202c2e">[email&#160;protected]</span></a>
         </div>
 
-        <a class="contact-cta" href="mailto:studio@paolointerno.com">
+        <a class="contact-cta" href="/cdn-cgi/l/email-protection#c6b5b2b3a2afa986b6a7a9aaa9afa8b2a3b4a8a9e8a5a9ab">
           Send me an email →
         </a>
       </div>
@@ -569,7 +612,7 @@
   </main>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const items=Array.from(document.querySelectorAll('.gallery-item'));
   const data=items.map((el,i)=>({i,src:el.dataset.src,title:el.dataset.title||'',meta:el.dataset.meta||'',desc:el.dataset.desc||'',el}));
   let cur=0,lbOpen=false;
@@ -593,16 +636,26 @@
 
   items.forEach((el,i)=>el.addEventListener('click',()=>openLb(i)));
   document.getElementById('lbClose').addEventListener('click',closeLb);
+  document.getElementById('lbCloseMobile').addEventListener('click',closeLb);
   document.getElementById('lbBackdrop').addEventListener('click',closeLb);
   document.getElementById('lbPrev').addEventListener('click',()=>navigate(-1));
   document.getElementById('lbNext').addEventListener('click',()=>navigate(1));
   document.getElementById('sbPrev').addEventListener('click',()=>navigate(-1));
   document.getElementById('sbNext').addEventListener('click',()=>navigate(1));
 
-  document.addEventListener('keydown',e=>{
-    if(lbOpen){if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1);if(e.key==='Escape')closeLb()}
-  });
+  // Click left/right of image to navigate
+  document.getElementById('lbClickPrev').addEventListener('click',(e)=>{e.stopPropagation();navigate(-1)});
+  document.getElementById('lbClickNext').addEventListener('click',(e)=>{e.stopPropagation();navigate(1)});
 
-  const heroEl=document.getElementById('mobileHeroImg');
-  if(heroEl){const srcs=data.map(d=>d.src);heroEl.src=srcs[Math.floor(Math.random()*srcs.length)]}
+  // Click blank space (img-wrap padding, not the zones) to close
+  document.getElementById('lbImgWrap').addEventListener('click',function(e){if(e.target===this)closeLb()});
+
+  document.addEventListener('keydown',function(e){
+    if(!lbOpen)return;
+    if(e.key==='ArrowLeft')navigate(-1);
+    else if(e.key==='ArrowRight')navigate(1);
+    else if(e.key==='Escape')closeLb();
+  });
 </script>
+</body>
+</html>
