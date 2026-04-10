@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paolo Internò - Illustrator and Concept artist</title>
+  <title>Paolo Internò — TTRPG & TCG Environment Illustrator for Hire</title>
   <meta name="description" content="Paolo Internò is a freelance environment and landscape illustrator and concept artist based in Italy, specialising in TTRPG, TCG, and tabletop game art commissions. World-building, card art, and dungeon environments for indie and mid-size publishers." />
   <meta name="keywords" content="TTRPG illustrator for hire, TCG illustrator, tabletop RPG art commission, fantasy environment art, landscape illustration freelance, concept artist Italy, card game art commission, indie TTRPG publisher art, freelance game illustrator Europe, Paolo Internò" />
   <meta name="author" content="Paolo Internò" />
@@ -11,13 +11,13 @@
   <link rel="canonical" href="https://www.paolointerno.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paolointerno.com/" />
-  <meta property="og:title" content="Paolo Internò - Illustrator and Concept artist" />
+  <meta property="og:title" content="Paolo Internò — TTRPG & TCG Environment Illustrator" />
   <meta property="og:description" content="Freelance environment illustrator and concept artist available for TTRPG, TCG, and tabletop game art commissions. Based in Italy." />
   <meta property="og:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Paolo Internò Illustration" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Paolo Internò - Illustrator and Concept artist" />
+  <meta name="twitter:title" content="Paolo Internò — TTRPG & TCG Environment Illustrator" />
   <meta name="twitter:description" content="Freelance environment illustrator and concept artist for TTRPG, TCG and tabletop game art commissions." />
   <meta name="twitter:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
@@ -315,29 +315,23 @@
 
     .lightbox-close-mobile{display:none}
 
-    /* Lightbox click-zone navigation — sits over the image */
-    .lb-click-prev,.lb-click-next{
-      position:absolute;top:0;bottom:0;width:50%;z-index:3;
-    }
-    .lb-click-prev{left:0;cursor:w-resize}
-    .lb-click-next{right:0;cursor:e-resize}
 
     /* ── Mobile ── */
     @media(max-width:768px){
       .site{grid-template-columns:1fr}
 
-      /* Sidebar: flex column, hero pushed to bottom via order */
+      /* Sidebar: relative container, hero behind content */
       .sidebar{
         position:relative;height:auto;border-right:none;
         border-bottom:1px solid var(--paper-dark);
-        padding:0 0 0;overflow:visible;background:var(--paper);
-        display:flex;flex-direction:column;
+        padding:0;overflow:hidden;background:transparent;
+        display:block;
       }
       .sidebar::after{display:none}
 
-      /* Hero goes last visually */
+      /* Hero: absolute, fills sidebar, behind everything */
       .sidebar-hero-wrap{
-        display:block;order:2;position:relative;width:100%;height:220px;overflow:hidden;
+        display:block;order:unset;position:absolute;inset:0;height:100%;overflow:hidden;z-index:0;
       }
       .sidebar-hero-img{
         width:100%;height:100%;object-fit:cover;object-position:center 25%;
@@ -345,14 +339,15 @@
       }
       .sidebar-hero-gradient{
         position:absolute;inset:0;
-        background:linear-gradient(to bottom,var(--paper) 0%,transparent 50%);
+        background:linear-gradient(to right,rgba(22,21,20,.97) 40%,rgba(22,21,20,.6) 70%,transparent 100%);
         pointer-events:none;
       }
       .sidebar-hero-name{display:none}
 
-      /* Content goes first */
+      /* Content on top of hero */
       .sidebar-text-content{
-        order:1;padding:1.4rem 1.4rem 1.8rem;
+        position:relative;z-index:1;
+        order:unset;padding:1.8rem 1.4rem 2rem;
       }
       .sidebar-text-content .sig-wrap{display:block}
       .sidebar-text-content .sig-wrap img{max-width:180px}
@@ -418,10 +413,7 @@
   <div class="lightbox-backdrop" id="lbBackdrop"></div>
   <button class="lightbox-close" id="lbClose" aria-label="Close">&#x2715;</button>
   <div class="lightbox-inner">
-    <div class="lightbox-img-wrap" id="lbImgWrap"><img id="lbImg" src="" alt="" />
-      <div class="lb-click-prev" id="lbClickPrev"></div>
-      <div class="lb-click-next" id="lbClickNext"></div>
-    </div>
+    <div class="lightbox-img-wrap" id="lbImgWrap"><img id="lbImg" src="" alt="" /></div>
     <div class="lightbox-panel">
       <div class="lightbox-counter" id="lbCounter">1 / 12</div>
       <div class="lightbox-title" id="lbTitle"></div>
@@ -643,12 +635,17 @@
   document.getElementById('sbPrev').addEventListener('click',()=>navigate(-1));
   document.getElementById('sbNext').addEventListener('click',()=>navigate(1));
 
-  // Click left/right of image to navigate
-  document.getElementById('lbClickPrev').addEventListener('click',(e)=>{e.stopPropagation();navigate(-1)});
-  document.getElementById('lbClickNext').addEventListener('click',(e)=>{e.stopPropagation();navigate(1)});
+  // Click image: left half = prev, right half = next
+  lbImg.addEventListener('click',function(e){
+    e.stopPropagation();
+    const half=this.getBoundingClientRect().left+this.offsetWidth/2;
+    navigate(e.clientX<half?-1:1);
+  });
 
-  // Click blank space (img-wrap padding, not the zones) to close
-  document.getElementById('lbImgWrap').addEventListener('click',function(e){if(e.target===this)closeLb()});
+  // Click anywhere outside the image (the wrap padding) = close
+  document.getElementById('lbImgWrap').addEventListener('click',function(e){
+    if(e.target!==lbImg)closeLb();
+  });
 
   document.addEventListener('keydown',function(e){
     if(!lbOpen)return;
