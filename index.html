@@ -102,6 +102,13 @@
     .divider{height:1px;background:var(--paper-dark);margin-bottom:1.6rem}
 
     /* ── Sidebar label ── */
+    /* ── About bio ── */
+    .about-bio{
+      font-family:var(--font-serif);font-size:14.5px;line-height:1.72;
+      color:var(--ink-mid);margin-bottom:1.6rem;
+    }
+    .about-bio strong{color:var(--ink);font-weight:500}
+
     .sidebar-label{
       font-size:9px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;
       color:var(--ink-dim);margin-bottom:.6rem;
@@ -197,26 +204,14 @@
 
     /* ── Gallery ── */
     .gallery-area{padding:3rem 2.5rem;background:var(--paper)}
-    .gallery-grid{display:flex;flex-direction:column;gap:10px}
-    .gallery-row{display:flex;gap:10px;height:var(--row-h)}
+    .gallery-grid{display:flex;flex-wrap:wrap;gap:10px}
 
     .gallery-item{
       overflow:hidden;position:relative;cursor:pointer;
       background:var(--paper-dark);border-radius:var(--radius);
-      flex-shrink:0;
+      flex-shrink:0;user-select:none;-webkit-user-select:none;touch-action:manipulation;
       opacity:0;animation:fadeUp .5s ease forwards;
     }
-
-    /* Row column widths */
-    .gallery-row:nth-child(1) .gallery-item:nth-child(1){flex:var(--r1-a)}
-    .gallery-row:nth-child(1) .gallery-item:nth-child(2){flex:var(--r1-b)}
-    .gallery-row:nth-child(1) .gallery-item:nth-child(3){flex:var(--r1-c)}
-    .gallery-row:nth-child(2) .gallery-item:nth-child(1){flex:var(--r2-a)}
-    .gallery-row:nth-child(2) .gallery-item:nth-child(2){flex:var(--r2-b)}
-    .gallery-row:nth-child(2) .gallery-item:nth-child(3){flex:var(--r2-c)}
-    .gallery-row:nth-child(3) .gallery-item:nth-child(1){flex:var(--r3-a)}
-    .gallery-row:nth-child(3) .gallery-item:nth-child(2){flex:var(--r3-b)}
-    .gallery-row:nth-child(3) .gallery-item:nth-child(3){flex:var(--r3-c)}
 
     .gallery-item img{
       width:100%;height:100%;object-fit:cover;display:block;
@@ -240,7 +235,7 @@
     .gallery-item:hover .item-overlay{opacity:1}
     .item-label{font-family:var(--font-serif);font-size:13.5px;font-style:italic;color:rgba(234,232,225,.94)}
 
-    /* Stagger fade-in */
+    /* /* Stagger fade-in *//* Stagger fade-in */
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .gallery-item:nth-child(1){animation-delay:.04s}
     .gallery-item:nth-child(2){animation-delay:.10s}
@@ -251,15 +246,21 @@
     .gallery-item:nth-child(7){animation-delay:.36s}
     .gallery-item:nth-child(8){animation-delay:.41s}
     .gallery-item:nth-child(9){animation-delay:.46s}
+    @media(prefers-reduced-motion:reduce){
+      .gallery-item{animation:none;opacity:1}
+    }
 
     /* ── Lightbox ── */
     .lightbox{position:fixed;inset:0;z-index:500;display:flex;opacity:0;pointer-events:none;transition:opacity .28s ease}
-    .lightbox.open{opacity:1;pointer-events:all}
+    .lightbox.open{opacity:1;pointer-events:auto}
     .lightbox-backdrop{position:absolute;inset:0;background:rgba(14,13,12,.95);cursor:zoom-out}
     .lightbox-inner{position:relative;z-index:1;display:flex;width:100%;height:100%;align-items:stretch}
-    .lightbox-img-wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:3.5rem 2.5rem 3.5rem 3rem;min-width:0;position:relative}
-    .lightbox-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;border-radius:2px;box-shadow:0 28px 70px rgba(0,0,0,.75);transition:opacity .2s ease,transform .2s ease}
-    .lightbox-img-wrap img.swapping{opacity:0;transform:scale(.97)}
+    .lightbox-scroll-area{flex:1;overflow-y:auto;min-width:0;padding:4rem 3rem 4rem;scrollbar-width:thin;scrollbar-color:var(--paper-dark) transparent;display:flex;flex-direction:column;align-items:center;gap:3rem}
+    .lightbox-scroll-area::-webkit-scrollbar{width:4px}
+    .lightbox-scroll-area::-webkit-scrollbar-thumb{background:var(--paper-dark);border-radius:2px}
+    .lightbox-process-item{width:100%;max-width:900px;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+    .lightbox-process-item img{width:100%;border-radius:2px;box-shadow:0 20px 60px rgba(0,0,0,.7);display:block}
+    .lightbox-process-caption{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-dim);text-align:center}
     .lightbox-panel{width:255px;flex-shrink:0;background:var(--paper-mid);border-left:1px solid var(--paper-dark);display:flex;flex-direction:column;padding:2.5rem 1.8rem 2rem}
     .lightbox-close{position:absolute;top:1rem;right:1.3rem;background:transparent;border:none;color:var(--ink-dim);font-size:22px;cursor:pointer;line-height:1;padding:4px 8px;border-radius:var(--radius);transition:color var(--tr);z-index:10}
     .lightbox-close:hover{color:var(--ink)}
@@ -330,9 +331,8 @@
 
       /* Gallery: stacked single column */
       .gallery-area{padding:1.4rem 1rem 2.5rem}
-      .gallery-grid{gap:8px}
-      .gallery-row{flex-direction:column;height:auto}
-      .gallery-item{flex:none !important;width:100% !important;height:230px !important}
+      .gallery-grid{gap:8px;flex-direction:column}
+      .gallery-item{flex:none !important;width:100% !important;height:220px !important}
 
       /* Mobile bottom contact */
       .mobile-bottom-contact{
@@ -355,7 +355,7 @@
 
       /* Lightbox mobile */
       .lightbox-inner{flex-direction:column}
-      .lightbox-img-wrap{flex:1;padding:3.5rem 1rem 1rem;height:auto;display:flex;align-items:center;justify-content:center}
+      .lightbox-scroll-area{padding:3.5rem 1rem 8rem;gap:2rem}
       .lightbox-panel{
         position:fixed;bottom:0;left:0;right:0;
         width:100%;border-left:none;border-top:1px solid var(--paper-dark);
@@ -381,13 +381,17 @@
         display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
       }
       .lightbox-divider{display:none}
+      .lightbox-thumbs{padding:0 1rem .8rem;gap:6px}
+      .lightbox-thumb img{width:52px;height:38px}
       .lightbox-nav{order:6}
       .lightbox-counter,.lightbox-title,.lightbox-meta,.lightbox-desc,.lightbox-nav,.lightbox-close-mobile{width:100%}
     }
 
     @media(max-width:480px){
-      .gallery-item{height:200px !important}
+      .gallery-item{height:180px !important}
     }
+
+    /* ── Tablet/Desktop: layout driven by JS (applyGalleryLayout) ── */
   </style>
 </head>
 <body>
@@ -397,7 +401,7 @@
   <div class="lightbox-backdrop" id="lbBackdrop"></div>
   <button class="lightbox-close" id="lbClose" aria-label="Close">&#x2715;</button>
   <div class="lightbox-inner">
-    <div class="lightbox-img-wrap" id="lbImgWrap"><img id="lbImg" src="" alt="" /></div>
+    <div class="lightbox-scroll-area" id="lbScrollArea"></div>
     <div class="lightbox-panel">
       <div class="lightbox-counter" id="lbCounter">1 / 9</div>
       <div class="lightbox-title" id="lbTitle"></div>
@@ -430,6 +434,10 @@
       </div>
 
       <p class="role">Illustrator &nbsp;|&nbsp; Concept Artist</p>
+
+      <p class="about-bio">
+        <strong>Paolo Internò</strong> is a freelance illustrator and concept artist based in Italy, specialising in environment and landscape art, world-building, and concepts for games, publishing, and creative projects.</a>.
+      </p>
 
       <div class="divider"></div>
 
@@ -486,77 +494,77 @@
   <main class="gallery-area" aria-label="Portfolio gallery">
     <div class="gallery-grid" id="galleryGrid" role="list">
 
-      <div class="gallery-row">
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/Forest.jpg"
-          data-title="Forest"
-          data-desc="A sprawling ancient forest bathed in diffuse light.">
-          <img src="assets/illustrations/Forest.jpg" alt="Forest" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Forest</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/Plains.jpg"
-          data-title="Plains"
-          data-desc="Wide-open grassland at golden hour.">
-          <img src="assets/illustrations/Plains.jpg" alt="Plains" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Plains</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/Bone_Maw.jpg"
-          data-title="Bone Maw"
-          data-desc="A monumental beast-mouth cavern entrance.">
-          <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Bone Maw</span></div>
-        </article>
-      </div>
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/Forest.jpg"
+        data-title="Forest"
+        data-desc="A sprawling ancient forest bathed in diffuse light.">
+        <img src="assets/illustrations/Forest.jpg" alt="Forest" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Forest</span></div>
+      </article>
 
-      <div class="gallery-row">
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/ash-monolith.jpg"
-          data-title="Ash Monolith"
-          data-desc="A solitary ancient monolith rises from an ash-covered plain.">
-          <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Ash Monolith</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/mana-breach.jpg"
-          data-title="Mana Breach"
-          data-desc="An arcane rupture tears through a ruined landscape.">
-          <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Mana Breach</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/whispers-from-the-mireglass.jpg"
-          data-title="Whispers from the Mireglass"
-          data-desc="A reflective swamp with ghostly apparitions.">
-          <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Whispers from the Mireglass</span></div>
-        </article>
-      </div>
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/Plains.jpg"
+        data-title="Plains"
+        data-desc="Wide-open grassland at golden hour.">
+        <img src="assets/illustrations/Plains.jpg" alt="Plains" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Plains</span></div>
+      </article>
 
-      <div class="gallery-row">
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/heartroot-vault.jpg"
-          data-title="Heartroot Vault"
-          data-desc="A vast underground root network forms a cathedral-like natural vault.">
-          <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Heartroot Vault</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/stonespire-conclave.jpg"
-          data-title="Stonespire Conclave"
-          data-desc="Ancient seats grown from trees atop a mountain plateau at dusk.">
-          <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Stonespire Conclave</span></div>
-        </article>
-        <article class="gallery-item" role="listitem"
-          data-src="assets/illustrations/paradox-hollow.jpg"
-          data-title="Paradox Hollow"
-          data-desc="A spatially distorted desert where geometry defies logic.">
-          <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow" loading="lazy"/>
-          <div class="item-overlay"><span class="item-label">Paradox Hollow</span></div>
-        </article>
-      </div>
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/Bone_Maw.jpg"
+        data-title="Bone Maw"
+        data-desc="A monumental beast-mouth cavern entrance.">
+        <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Bone Maw</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/ash-monolith.jpg"
+        data-title="Ash Monolith"
+        data-desc="A solitary ancient monolith rises from an ash-covered plain.">
+        <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Ash Monolith</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/mana-breach.jpg"
+        data-title="Mana Breach"
+        data-desc="An arcane rupture tears through a ruined landscape.">
+        <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Mana Breach</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/whispers-from-the-mireglass.jpg"
+        data-title="Whispers from the Mireglass"
+        data-desc="A reflective swamp with ghostly apparitions.">
+        <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Whispers from the Mireglass</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/heartroot-vault.jpg"
+        data-title="Heartroot Vault"
+        data-desc="A vast underground root network forms a cathedral-like natural vault.">
+        <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Heartroot Vault</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/stonespire-conclave.jpg"
+        data-title="Stonespire Conclave"
+        data-desc="Ancient seats grown from trees atop a mountain plateau at dusk.">
+        <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Stonespire Conclave</span></div>
+      </article>
+
+      <article class="gallery-item" role="listitem"
+        data-src="assets/illustrations/paradox-hollow.jpg"
+        data-title="Paradox Hollow"
+        data-desc="A spatially distorted desert where geometry defies logic.">
+        <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow" loading="lazy"/>
+        <div class="item-overlay"><span class="item-label">Paradox Hollow</span></div>
+      </article>
 
     </div>
   </main>
@@ -596,26 +604,114 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const items = Array.from(document.querySelectorAll('.gallery-item'));
+
+  // ── Gallery layout engine ──
+  // Desktop (>1100px):  3 per row, alternating flex ratios, fixed row height 300px
+  // Tablet (769-1100px): row 0 = full width; rows 1+ = 2 per row alternating widths, height 240px
+  // Mobile (<=768px):   1 per row, full width, height 220px
+
+  const DESKTOP_ROW_H  = 300;
+  const TABLET_ROW_H   = 240;
+
+  const desktopPatterns = [
+    [55, 25, 20],
+    [40, 35, 25],
+    [30, 40, 30],
+  ];
+
+  const tabletPairs = [
+    ['62%', '38%'],
+    ['38%', '62%'],
+  ];
+
+  function applyGalleryLayout() {
+    const w = window.innerWidth;
+    const isDesktop = w > 1100;
+    const isTablet  = w >= 769 && w <= 1100;
+    items.forEach(el => { el.style.width = ''; el.style.height = ''; el.style.flex = ''; });
+
+    if (isDesktop) {
+      const totalRatioPerRow = desktopPatterns[0].reduce((a,b) => a+b, 0);
+      items.forEach((el, i) => {
+        const row    = Math.floor(i / 3);
+        const col    = i % 3;
+        const ratios = desktopPatterns[row % desktopPatterns.length];
+        const pct    = (ratios[col] / totalRatioPerRow * 100).toFixed(2);
+        el.style.flex   = '0 0 calc(' + pct + '% - 7px)';
+        el.style.width  = 'calc(' + pct + '% - 7px)';
+        el.style.height = DESKTOP_ROW_H + 'px';
+      });
+    } else if (isTablet) {
+      items[0].style.width  = '100%';
+      items[0].style.height = TABLET_ROW_H + 'px';
+      items[0].style.flex   = 'none';
+      for (let i = 1; i < items.length; i++) {
+        const pairedIdx = i - 1;
+        const pairRow   = Math.floor(pairedIdx / 2) % tabletPairs.length;
+        const posInPair = pairedIdx % 2;
+        const gap = 10;
+        const pct = tabletPairs[pairRow][posInPair];
+        items[i].style.width  = 'calc(' + pct + ' - ' + (gap / 2) + 'px)';
+        items[i].style.height = TABLET_ROW_H + 'px';
+        items[i].style.flex   = 'none';
+      }
+    }
+  }
+
+  applyGalleryLayout();
+  let _resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(_resizeTimer);
+    _resizeTimer = setTimeout(applyGalleryLayout, 120);
+  });
+
+  function getProcess(el) {
+    try {
+      const steps = JSON.parse(el.dataset.process || '[]');
+      if (steps.length) return steps;
+    } catch(e) {}
+    return [{ src: el.dataset.src, caption: 'Final' }];
+  }
+
   const data = items.map((el, i) => ({
     i,
-    src:   el.dataset.src,
-    title: el.dataset.title || '',
-    meta:  el.dataset.meta  || '',
-    desc:  el.dataset.desc  || '',
+    src:     el.dataset.src,
+    title:   el.dataset.title || '',
+    meta:    el.dataset.meta  || '',
+    desc:    el.dataset.desc  || '',
+    process: getProcess(el),
     el
   }));
+
   let cur = 0, lbOpen = false;
   const isMob = () => window.innerWidth <= 768;
 
-  const lb     = document.getElementById('lightbox');
-  const lbImg  = document.getElementById('lbImg');
-  const lbCtr  = document.getElementById('lbCounter');
-  const lbTitl = document.getElementById('lbTitle');
-  const lbMeta = document.getElementById('lbMeta');
-  const lbDesc = document.getElementById('lbDesc');
-  const sbCap  = document.getElementById('sbCaption');
-  const sbTitl = document.getElementById('sbTitle');
-  const sbMeta = document.getElementById('sbMeta');
+  const lb           = document.getElementById('lightbox');
+  const lbScrollArea = document.getElementById('lbScrollArea');
+  const lbCtr        = document.getElementById('lbCounter');
+  const lbTitl       = document.getElementById('lbTitle');
+  const lbMeta       = document.getElementById('lbMeta');
+  const lbDesc       = document.getElementById('lbDesc');
+  const sbCap        = document.getElementById('sbCaption');
+  const sbTitl       = document.getElementById('sbTitle');
+  const sbMeta       = document.getElementById('sbMeta');
+
+  function buildScrollArea(d) {
+    lbScrollArea.innerHTML = '';
+    d.process.forEach(p => {
+      const item = document.createElement('div');
+      item.className = 'lightbox-process-item';
+      const img = document.createElement('img');
+      img.src = p.src; img.alt = p.caption; img.loading = 'lazy';
+      const cap = document.createElement('div');
+      cap.className = 'lightbox-process-caption';
+      cap.textContent = p.caption;
+      item.appendChild(img);
+      item.appendChild(cap);
+      lbScrollArea.appendChild(item);
+    });
+    lbScrollArea.scrollTop = 0;
+  }
 
   function syncUI() {
     const d = data[cur];
@@ -625,26 +721,20 @@
     lbDesc.textContent = d.desc;
     sbTitl.textContent = d.title;
     sbMeta.textContent = d.meta;
-  }
-
-  function swapImg(src, alt) {
-    lbImg.classList.add('swapping');
-    setTimeout(() => { lbImg.src = src; lbImg.alt = alt; lbImg.classList.remove('swapping'); }, 200);
+    buildScrollArea(d);
   }
 
   function navigate(dir) {
     cur = (cur + dir + data.length) % data.length;
-    swapImg(data[cur].src, data[cur].title);
     syncUI();
   }
 
   function openLb(idx) {
     cur = idx; lbOpen = true;
-    lbImg.src = data[cur].src; lbImg.alt = data[cur].title;
     syncUI();
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
-    if (!isMob()) sbCap.classList.add('active');
+    if (!isMob()) { sbCap.classList.add('active'); sbCap.removeAttribute('aria-hidden'); }
   }
 
   function closeLb() {
@@ -652,9 +742,15 @@
     lb.classList.remove('open');
     document.body.style.overflow = '';
     sbCap.classList.remove('active');
+    sbCap.setAttribute('aria-hidden', 'true');
   }
 
-  items.forEach((el, i) => el.addEventListener('click', () => openLb(i)));
+  items.forEach((el, i) => {
+    el.addEventListener('click', () => openLb(i));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); }
+    });
+  });
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbCloseMobile').addEventListener('click', closeLb);
   document.getElementById('lbBackdrop').addEventListener('click', closeLb);
@@ -662,16 +758,6 @@
   document.getElementById('lbNext').addEventListener('click', () => navigate(1));
   document.getElementById('sbPrev').addEventListener('click', () => navigate(-1));
   document.getElementById('sbNext').addEventListener('click', () => navigate(1));
-
-  lbImg.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const half = this.getBoundingClientRect().left + this.offsetWidth / 2;
-    navigate(e.clientX < half ? -1 : 1);
-  });
-
-  document.getElementById('lbImgWrap').addEventListener('click', function(e) {
-    if (e.target !== lbImg) closeLb();
-  });
 
   document.addEventListener('keydown', function(e) {
     if (!lbOpen) return;
