@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paolo Internò - Illustrator & Concept Artist</title>
-  <meta name="description" content="Paolo Internò is a freelance illustrator and concept artist based in Italy, specialising in environment and landscape art, world-building, and concepts for games, publishing, and creative projects." />
-  <meta name="keywords" content="freelance illustrator for hire, concept artist Italy, environment illustration, landscape art commission, fantasy illustration, world-building art, concept art, digital illustration freelance, illustration commission Europe, Paolo Internò" />
+  <title>Paolo Internò — Landscape Illustrator &amp; Environment Artist</title>
+  <meta name="description" content="Paolo Internò (Paolo Interno) is a fantasy landscape illustrator and environment artist based in Italy. Landscape illustration, environment art, and concept art for games and publishing. Open for commissions." />
+  <meta name="keywords" content="Paolo Internò, Paolo Interno, Internò art, Interno art, Internò illustration, Interno illustration, Internò landscape, Interno landscape, Internò environment, Interno environment, landscape illustrator Italy, fantasy landscape illustration, environment illustrator, concept artist Italy, landscape art commission, world-building illustration, game art, publishing illustration" />
   <meta name="author" content="Paolo Internò" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.paolointerno.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paolointerno.com/" />
-  <meta property="og:title" content="Paolo Internò - Illustrator & Concept Artist" />
-  <meta property="og:description" content="Freelance illustrator and concept artist available for environment, landscape, and background art commissions. Based in Italy." />
+  <meta property="og:title" content="Paolo Internò — Landscape Illustrator &amp; Environment Artist" />
+  <meta property="og:description" content="Fantasy landscape illustrator and environment artist based in Italy. Detailed, narrative-driven landscapes for games and publishing. Open for commissions." />
   <meta property="og:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Paolo Internò Illustration" />
+  <meta property="og:site_name" content="Paolo Internò — Landscape Illustrator" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Paolo Internò - Illustrator & Concept Artist" />
-  <meta name="twitter:description" content="Freelance illustrator and concept artist for environment, landscape, and background art commissions." />
+  <meta name="twitter:title" content="Paolo Internò — Landscape Illustrator &amp; Environment Artist" />
+  <meta name="twitter:description" content="Fantasy landscape illustrator based in Italy. Environment and landscape art for games and publishing." />
   <meta name="twitter:image" content="https://www.paolointerno.com/assets/og-image.jpg" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
   <link rel="mask-icon" href="assets/favicon/favicon.svg" color="#c8a96e" />
@@ -32,8 +32,41 @@
   <meta name="theme-color" content="#1a1814" />
   <meta name="msapplication-TileColor" content="#1a1814" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Paolo Internò","url":"https://www.paolointerno.com","email":"studio@paolointerno.com","jobTitle":"Illustrator & Concept Artist","description":"Freelance illustrator and concept artist specialising in environment, landscape, and background art for games, publishing, and creative projects. Based in Italy.","knowsAbout":["environment illustration","landscape art","concept art","environment design","fantasy illustration","world-building","digital illustration","game art","publishing illustration"],"address":{"@type":"PostalAddress","addressCountry":"IT"},"sameAs":["https://www.artstation.com/paolointerno","https://www.linkedin.com/in/paolointerno"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Paolo Internò",
+    "alternateName": ["Paolo Interno", "P. Internò", "P. Interno"],
+    "url": "https://www.paolointerno.com",
+    "email": "studio@paolointerno.com",
+    "jobTitle": "Landscape Illustrator & Environment Artist",
+    "description": "Paolo Internò (Paolo Interno) is a fantasy landscape illustrator and environment artist based in Italy, creating detailed narrative-driven landscapes for games and publishing.",
+    "knowsAbout": [
+      "landscape illustration",
+      "landscape art",
+      "environment illustration",
+      "environment art",
+      "fantasy landscape",
+      "concept art",
+      "environment design",
+      "world-building",
+      "digital painting",
+      "game art",
+      "publishing illustration",
+      "fantasy illustration",
+      "background art"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IT"
+    },
+    "sameAs": [
+      "https://www.artstation.com/paolointerno",
+      "https://www.linkedin.com/in/paolointerno"
+    ]
+  }
   </script>
+  <link rel="preload" as="image" href="assets/illustrations/Forest.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -56,16 +89,14 @@
       --font-sans:  'DM Sans', sans-serif;
       --radius:     3px;
       --tr:         0.18s ease;
-      /* Gallery row heights and column ratios */
-      --row-h: 300px;
-      --r1-a: 55; --r1-b: 25; --r1-c: 20;
-      --r2-a: 40; --r2-b: 35; --r2-c: 25;
-      --r3-a: 30; --r3-b: 40; --r3-c: 30;
     }
 
     html,body{height:100%;background:var(--paper);color:var(--ink)}
     body{font-family:var(--font-sans);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
+
+    /* ── Accessibility / SEO ── */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* ── Layout ── */
     .site{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:100vh}
@@ -232,10 +263,12 @@
       opacity:0;transition:opacity .25s ease;
       display:flex;align-items:flex-end;padding:12px 14px;z-index:1;
     }
+    .gallery-item:focus-visible{outline:2px solid rgba(234,232,225,.4);outline-offset:2px}
+    .gallery-item:focus-visible .item-overlay{opacity:1}
     .gallery-item:hover .item-overlay{opacity:1}
     .item-label{font-family:var(--font-serif);font-size:13.5px;font-style:italic;color:rgba(234,232,225,.94)}
 
-    /* /* Stagger fade-in *//* Stagger fade-in */
+    /* ── Stagger fade-in ── */
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .gallery-item:nth-child(1){animation-delay:.04s}
     .gallery-item:nth-child(2){animation-delay:.10s}
@@ -246,6 +279,9 @@
     .gallery-item:nth-child(7){animation-delay:.36s}
     .gallery-item:nth-child(8){animation-delay:.41s}
     .gallery-item:nth-child(9){animation-delay:.46s}
+    .gallery-item:nth-child(10){animation-delay:.52s}
+    .gallery-item:nth-child(11){animation-delay:.57s}
+    .gallery-item:nth-child(12){animation-delay:.62s}
     @media(prefers-reduced-motion:reduce){
       .gallery-item{animation:none;opacity:1}
     }
@@ -281,6 +317,8 @@
     }
     .lightbox-nav-btn:hover{background:rgba(255,255,255,.05);color:var(--ink)}
     .lightbox-nav-btn svg{width:12px;height:12px}
+    .lightbox-panel{transform:translateX(18px);opacity:0;transition:transform .32s cubic-bezier(.25,.46,.45,.94),opacity .28s ease}
+    .lightbox.open .lightbox-panel{transform:translateX(0);opacity:1}
 
     /* ── Mobile bottom contact (hidden on desktop) ── */
     .mobile-bottom-contact{display:none}
@@ -403,7 +441,7 @@
   <div class="lightbox-inner">
     <div class="lightbox-scroll-area" id="lbScrollArea"></div>
     <div class="lightbox-panel">
-      <div class="lightbox-counter" id="lbCounter">1 / 9</div>
+      <div class="lightbox-counter" id="lbCounter"></div>
       <div class="lightbox-title" id="lbTitle"></div>
       <div class="lightbox-meta" id="lbMeta"></div>
       <button class="lightbox-close-mobile" id="lbCloseMobile" aria-label="Close">&#x2715; Close</button>
@@ -427,22 +465,23 @@
   <aside class="sidebar" aria-label="Contact and navigation">
     <div class="sidebar-text-content">
 
+      <h1 class="sr-only">Paolo Internò (Paolo Interno) — Landscape Illustrator &amp; Environment Artist</h1>
       <div class="sig-wrap">
         <img src="assets/Signature.png" alt="Paolo Internò"
           onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
         <span class="sig-fallback">Paolo Internò</span>
       </div>
 
-      <p class="role">Illustrator &nbsp;|&nbsp; Concept Artist</p>
+      <p class="role">Landscape Illustrator &nbsp;|&nbsp; Environment Artist</p>
 
       <p class="about-bio">
-        <strong>Paolo Internò</strong> is a freelance illustrator and concept artist specialising in environment, landscape, and background art for games, publishing, and creative projects. Based in Italy..
+        <strong>Paolo Internò</strong> is a fantasy landscape illustrator creating detailed, narrative-driven environments for games and publishing. Focused on composition, lighting, and clarity — building environments that read effectively at multiple scales and support storytelling within production constraints.
       </p>
 
       <div class="divider"></div>
 
       <!-- Sidebar caption (desktop only, shown when lightbox is open) -->
-      <div class="sidebar-caption-area" id="sbCaption">
+      <div class="sidebar-caption-area" id="sbCaption" aria-hidden="true">
         <div class="sidebar-caption-title" id="sbTitle">-</div>
         <div class="sidebar-caption-meta" id="sbMeta">-</div>
         <div class="sidebar-nav-btns">
@@ -494,75 +533,75 @@
   <main class="gallery-area" aria-label="Portfolio gallery">
     <div class="gallery-grid" id="galleryGrid" role="list">
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/Forest.jpg"
         data-title="Forest"
         data-desc="A sprawling ancient forest bathed in diffuse light.">
-        <img src="assets/illustrations/Forest.jpg" alt="Forest" loading="lazy"/>
+        <img src="assets/illustrations/Forest.jpg" alt="Forest — fantasy landscape illustration by Paolo Internò" fetchpriority="high"/>
         <div class="item-overlay"><span class="item-label">Forest</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/Plains.jpg"
         data-title="Plains"
         data-desc="Wide-open grassland at golden hour.">
-        <img src="assets/illustrations/Plains.jpg" alt="Plains" loading="lazy"/>
+        <img src="assets/illustrations/Plains.jpg" alt="Plains — environment landscape illustration by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Plains</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/Bone_Maw.jpg"
         data-title="Bone Maw"
         data-desc="A monumental beast-mouth cavern entrance.">
-        <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw" loading="lazy"/>
+        <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw — fantasy environment art by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Bone Maw</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/ash-monolith.jpg"
         data-title="Ash Monolith"
         data-desc="A solitary ancient monolith rises from an ash-covered plain.">
-        <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith" loading="lazy"/>
+        <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Ash Monolith</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/mana-breach.jpg"
         data-title="Mana Breach"
         data-desc="An arcane rupture tears through a ruined landscape.">
-        <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach" loading="lazy"/>
+        <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach — fantasy landscape art by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Mana Breach</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/whispers-from-the-mireglass.jpg"
         data-title="Whispers from the Mireglass"
         data-desc="A reflective swamp with ghostly apparitions.">
-        <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass" loading="lazy"/>
+        <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass — landscape illustration by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Whispers from the Mireglass</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/heartroot-vault.jpg"
         data-title="Heartroot Vault"
         data-desc="A vast underground root network forms a cathedral-like natural vault.">
-        <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault" loading="lazy"/>
+        <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault — environment illustration by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Heartroot Vault</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/stonespire-conclave.jpg"
         data-title="Stonespire Conclave"
         data-desc="Ancient seats grown from trees atop a mountain plateau at dusk.">
-        <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave" loading="lazy"/>
+        <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave — landscape environment art by Paolo Internò" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Stonespire Conclave</span></div>
       </article>
 
-      <article class="gallery-item" role="listitem"
+      <article class="gallery-item" role="listitem" tabindex="0"
         data-src="assets/illustrations/paradox-hollow.jpg"
         data-title="Paradox Hollow"
         data-desc="A spatially distorted desert where geometry defies logic.">
-        <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow" loading="lazy"/>
+        <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy"/>
         <div class="item-overlay"><span class="item-label">Paradox Hollow</span></div>
       </article>
 
@@ -600,171 +639,138 @@
 </div>
 
 <!-- Legal notice -->
-<footer class="legal-notice">© 2026 Paolo Internò. All rights reserved.</footer>
+<footer class="legal-notice">© 2026 <strong style="font-weight:400">Paolo Internò</strong> — Landscape Illustrator &amp; Environment Artist &nbsp;·&nbsp; paolointerno.com</footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  'use strict';
   const items = Array.from(document.querySelectorAll('.gallery-item'));
 
-  // ── Gallery layout engine ──
-  // Desktop (>1100px):  3 per row, alternating flex ratios, fixed row height 300px
-  // Tablet (769-1100px): row 0 = full width; rows 1+ = 2 per row alternating widths, height 240px
-  // Mobile (<=768px):   1 per row, full width, height 220px
-
-  const DESKTOP_ROW_H  = 300;
-  const TABLET_ROW_H   = 240;
-
-  const desktopPatterns = [
-    [55, 25, 20],
-    [40, 35, 25],
-    [30, 40, 30],
-  ];
-
-  const tabletPairs = [
-    ['62%', '38%'],
-    ['38%', '62%'],
-  ];
+  // ── Gallery layout ──────────────────────────────────────────────────────
+  const DESKTOP_ROW_H = 300, TABLET_ROW_H = 240;
+  const desktopPatterns = [[55,25,20],[40,35,25],[30,40,30],[25,50,25]];
+  const tabletPairs = [['62%','38%'],['38%','62%']];
 
   function applyGalleryLayout() {
     const w = window.innerWidth;
-    const isDesktop = w > 1100;
-    const isTablet  = w >= 769 && w <= 1100;
-    items.forEach(el => { el.style.width = ''; el.style.height = ''; el.style.flex = ''; });
-
-    if (isDesktop) {
-      const totalRatioPerRow = desktopPatterns[0].reduce((a,b) => a+b, 0);
-      items.forEach((el, i) => {
-        const row    = Math.floor(i / 3);
-        const col    = i % 3;
-        const ratios = desktopPatterns[row % desktopPatterns.length];
-        const pct    = (ratios[col] / totalRatioPerRow * 100).toFixed(2);
-        el.style.flex   = '0 0 calc(' + pct + '% - 7px)';
-        el.style.width  = 'calc(' + pct + '% - 7px)';
-        el.style.height = DESKTOP_ROW_H + 'px';
+    items.forEach(el => { el.style.width=''; el.style.height=''; el.style.flex=''; });
+    if (w > 1100) {
+      const total = desktopPatterns[0].reduce((a,b)=>a+b,0);
+      items.forEach((el,i) => {
+        const row=Math.floor(i/3), col=i%3;
+        const ratios=desktopPatterns[row%desktopPatterns.length];
+        const pct=(ratios[col]/total*100).toFixed(2);
+        el.style.flex='0 0 calc('+pct+'% - 7px)';
+        el.style.width='calc('+pct+'% - 7px)';
+        el.style.height=DESKTOP_ROW_H+'px';
       });
-    } else if (isTablet) {
-      items[0].style.width  = '100%';
-      items[0].style.height = TABLET_ROW_H + 'px';
-      items[0].style.flex   = 'none';
-      for (let i = 1; i < items.length; i++) {
-        const pairedIdx = i - 1;
-        const pairRow   = Math.floor(pairedIdx / 2) % tabletPairs.length;
-        const posInPair = pairedIdx % 2;
-        const gap = 10;
-        const pct = tabletPairs[pairRow][posInPair];
-        items[i].style.width  = 'calc(' + pct + ' - ' + (gap / 2) + 'px)';
-        items[i].style.height = TABLET_ROW_H + 'px';
-        items[i].style.flex   = 'none';
+    } else if (w >= 769) {
+      items[0].style.cssText='width:100%;height:'+TABLET_ROW_H+'px;flex:none';
+      for (let i=1;i<items.length;i++) {
+        const pi=i-1, pr=Math.floor(pi/2)%tabletPairs.length, pos=pi%2;
+        items[i].style.width='calc('+tabletPairs[pr][pos]+' - 5px)';
+        items[i].style.height=TABLET_ROW_H+'px';
+        items[i].style.flex='none';
       }
     }
   }
-
   applyGalleryLayout();
-  let _resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(_resizeTimer);
-    _resizeTimer = setTimeout(applyGalleryLayout, 120);
-  });
+  let _rt;
+  window.addEventListener('resize', () => { clearTimeout(_rt); _rt=setTimeout(applyGalleryLayout,120); });
 
+  // ── Data ────────────────────────────────────────────────────────────────
   function getProcess(el) {
-    try {
-      const steps = JSON.parse(el.dataset.process || '[]');
-      if (steps.length) return steps;
-    } catch(e) {}
-    return [{ src: el.dataset.src, caption: 'Final' }];
+    try { const s=JSON.parse(el.dataset.process||'[]'); if(s.length) return s; } catch(e){}
+    return [{src:el.dataset.src, caption:'Final'}];
   }
-
-  const data = items.map((el, i) => ({
-    i,
-    src:     el.dataset.src,
-    title:   el.dataset.title || '',
-    meta:    el.dataset.meta  || '',
-    desc:    el.dataset.desc  || '',
-    process: getProcess(el),
-    el
+  const data = items.map((el,i) => ({
+    i, src:el.dataset.src, title:el.dataset.title||'',
+    meta:el.dataset.meta||'', desc:el.dataset.desc||'',
+    process:getProcess(el), el
   }));
 
-  let cur = 0, lbOpen = false;
+  // ── Lightbox ────────────────────────────────────────────────────────────
+  let cur=0, lbOpen=false;
   const isMob = () => window.innerWidth <= 768;
-
-  const lb           = document.getElementById('lightbox');
-  const lbScrollArea = document.getElementById('lbScrollArea');
-  const lbCtr        = document.getElementById('lbCounter');
-  const lbTitl       = document.getElementById('lbTitle');
-  const lbMeta       = document.getElementById('lbMeta');
-  const lbDesc       = document.getElementById('lbDesc');
-  const sbCap        = document.getElementById('sbCaption');
-  const sbTitl       = document.getElementById('sbTitle');
-  const sbMeta       = document.getElementById('sbMeta');
+  const lb=document.getElementById('lightbox');
+  const lbScrollArea=document.getElementById('lbScrollArea');
+  const lbCtr=document.getElementById('lbCounter');
+  const lbTitl=document.getElementById('lbTitle');
+  const lbMeta=document.getElementById('lbMeta');
+  const lbDesc=document.getElementById('lbDesc');
+  const sbCap=document.getElementById('sbCaption');
+  const sbTitl=document.getElementById('sbTitle');
+  const sbMeta=document.getElementById('sbMeta');
 
   function buildScrollArea(d) {
-    lbScrollArea.innerHTML = '';
+    lbScrollArea.innerHTML='';
     d.process.forEach(p => {
-      const item = document.createElement('div');
-      item.className = 'lightbox-process-item';
-      const img = document.createElement('img');
-      img.src = p.src; img.alt = p.caption; img.loading = 'lazy';
-      const cap = document.createElement('div');
-      cap.className = 'lightbox-process-caption';
-      cap.textContent = p.caption;
-      item.appendChild(img);
-      item.appendChild(cap);
-      lbScrollArea.appendChild(item);
+      const wrap=document.createElement('div'); wrap.className='lightbox-process-item';
+      const img=document.createElement('img'); img.src=p.src; img.alt=p.caption; img.loading='lazy';
+      const cap=document.createElement('div'); cap.className='lightbox-process-caption'; cap.textContent=p.caption;
+      wrap.append(img,cap); lbScrollArea.appendChild(wrap);
     });
-    lbScrollArea.scrollTop = 0;
+    lbScrollArea.scrollTop=0;
   }
 
   function syncUI() {
-    const d = data[cur];
-    lbCtr.textContent  = `${cur + 1} / ${data.length}`;
-    lbTitl.textContent = d.title;
-    lbMeta.textContent = d.meta;
-    lbDesc.textContent = d.desc;
-    sbTitl.textContent = d.title;
-    sbMeta.textContent = d.meta;
+    const d=data[cur];
+    lbCtr.textContent=(cur+1)+' / '+data.length;
+    lbTitl.textContent=d.title; lbMeta.textContent=d.meta; lbDesc.textContent=d.desc;
+    sbTitl.textContent=d.title; sbMeta.textContent=d.meta;
     buildScrollArea(d);
   }
 
-  function navigate(dir) {
-    cur = (cur + dir + data.length) % data.length;
-    syncUI();
-  }
+  function navigate(dir) { cur=(cur+dir+data.length)%data.length; syncUI(); }
 
   function openLb(idx) {
-    cur = idx; lbOpen = true;
-    syncUI();
+    cur=idx; lbOpen=true; syncUI();
     lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow='hidden';
     if (!isMob()) { sbCap.classList.add('active'); sbCap.removeAttribute('aria-hidden'); }
+    document.getElementById('lbClose').focus();
   }
 
   function closeLb() {
-    lbOpen = false;
+    if (!lbOpen) return;
+    lbOpen=false;
     lb.classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.style.overflow='';
     sbCap.classList.remove('active');
-    sbCap.setAttribute('aria-hidden', 'true');
+    sbCap.setAttribute('aria-hidden','true');
+    data[cur].el.focus();
   }
 
-  items.forEach((el, i) => {
-    el.addEventListener('click', () => openLb(i));
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); }
-    });
+  items.forEach((el,i) => {
+    el.setAttribute('role','button');
+    el.addEventListener('click', ()=>openLb(i));
+    el.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb(i);} });
   });
+
   document.getElementById('lbClose').addEventListener('click', closeLb);
   document.getElementById('lbCloseMobile').addEventListener('click', closeLb);
   document.getElementById('lbBackdrop').addEventListener('click', closeLb);
-  document.getElementById('lbPrev').addEventListener('click', () => navigate(-1));
-  document.getElementById('lbNext').addEventListener('click', () => navigate(1));
-  document.getElementById('sbPrev').addEventListener('click', () => navigate(-1));
-  document.getElementById('sbNext').addEventListener('click', () => navigate(1));
+  document.getElementById('lbPrev').addEventListener('click', ()=>navigate(-1));
+  document.getElementById('lbNext').addEventListener('click', ()=>navigate(1));
+  document.getElementById('sbPrev').addEventListener('click', ()=>navigate(-1));
+  document.getElementById('sbNext').addEventListener('click', ()=>navigate(1));
 
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', e => {
     if (!lbOpen) return;
-    if (e.key === 'ArrowLeft')  navigate(-1);
-    else if (e.key === 'ArrowRight') navigate(1);
-    else if (e.key === 'Escape') closeLb();
+    if (e.key==='ArrowLeft') navigate(-1);
+    else if (e.key==='ArrowRight') navigate(1);
+    else if (e.key==='Escape') closeLb();
   });
+
+  // Touch swipe
+  let _tx=null;
+  lbScrollArea.addEventListener('touchstart', e=>{_tx=e.touches[0].clientX;},{passive:true});
+  lbScrollArea.addEventListener('touchend', e=>{
+    if(_tx===null) return;
+    const dx=e.changedTouches[0].clientX-_tx;
+    if(Math.abs(dx)>50) navigate(dx<0?1:-1);
+    _tx=null;
+  },{passive:true});
+
 </script>
 </body>
 </html>
