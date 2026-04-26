@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paolo Internò — Landscape Illustrator &amp; Environment Artist</title>
   <meta name="description" content="Paolo Internò (Paolo Interno) is a fantasy landscape illustrator and environment artist based in Italy. Landscape illustration, environment art, and concept art for games and publishing. Open for commissions." />
-  <meta name="keywords" content="Paolo Internò, Paolo Interno, Internò art, Interno art, Internò illustration, Interno illustration, Internò landscape, Interno landscape, Internò environment, Interno environment, landscape illustrator Italy, fantasy landscape illustration, environment illustrator, concept artist Italy, landscape art commission, world-building illustration, game art, publishing illustration" />
   <meta name="author" content="Paolo Internò" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.paolointerno.com/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <link rel="alternate" hreflang="en" href="https://www.paolointerno.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.paolointerno.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.paolointerno.com/" />
   <meta property="og:title" content="Paolo Internò — Landscape Illustrator &amp; Environment Artist" />
@@ -34,39 +36,181 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Paolo Internò",
-    "alternateName": ["Paolo Interno", "P. Internò", "P. Interno"],
-    "url": "https://www.paolointerno.com",
-    "email": "studio@paolointerno.com",
-    "jobTitle": "Landscape Illustrator & Environment Artist",
-    "description": "Paolo Internò (Paolo Interno) is a fantasy landscape illustrator and environment artist based in Italy, creating detailed narrative-driven landscapes for games and publishing.",
-    "knowsAbout": [
-      "landscape illustration",
-      "landscape art",
-      "environment illustration",
-      "environment art",
-      "fantasy landscape",
-      "concept art",
-      "environment design",
-      "world-building",
-      "digital painting",
-      "game art",
-      "publishing illustration",
-      "fantasy illustration",
-      "background art"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IT"
-    },
-    "sameAs": [
-      "https://www.artstation.com/paolointerno",
-      "https://www.linkedin.com/in/paolointerno"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.paolointerno.com/#person",
+        "name": "Paolo Internò",
+        "alternateName": ["Paolo Interno", "P. Internò", "P. Interno"],
+        "url": "https://www.paolointerno.com",
+        "email": "studio@paolointerno.com",
+        "jobTitle": "Freelance Landscape Illustrator & Environment Artist",
+        "description": "Paolo Internò (Paolo Interno) is a fantasy landscape illustrator and environment artist based in Italy, creating detailed narrative-driven landscapes for games and publishing.",
+        "knowsAbout": [
+          "landscape illustration", "environment illustration", "fantasy landscape art",
+          "concept art", "environment design", "world-building", "digital painting",
+          "game art", "publishing illustration", "fantasy illustration", "background art"
+        ],
+        "address": { "@type": "PostalAddress", "addressCountry": "IT" },
+        "sameAs": [
+          "https://www.artstation.com/paolointerno",
+          "https://www.linkedin.com/in/paolointerno"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.paolointerno.com/#service",
+        "name": "Paolo Internò — Freelance Landscape Illustration",
+        "url": "https://www.paolointerno.com",
+        "email": "studio@paolointerno.com",
+        "provider": { "@id": "https://www.paolointerno.com/#person" },
+        "serviceType": ["Landscape Illustration", "Environment Art", "Concept Art", "Fantasy Illustration"],
+        "areaServed": "Worldwide",
+        "description": "Commission-based fantasy landscape and environment illustration for games and publishing. Focused on composition, lighting, and narrative storytelling.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Illustration Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fantasy Landscape Illustration" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Environment Art for Games" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Publishing Illustration" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.paolointerno.com/#webpage",
+        "url": "https://www.paolointerno.com/",
+        "name": "Paolo Internò — Landscape Illustrator & Environment Artist",
+        "description": "Portfolio of Paolo Internò, freelance fantasy landscape illustrator and environment artist. Detailed, narrative-driven environments for games and publishing.",
+        "author": { "@id": "https://www.paolointerno.com/#person" },
+        "inLanguage": "en",
+        "about": { "@id": "https://www.paolointerno.com/#person" }
+      },
+      {
+        "@type": "ImageGallery",
+        "@id": "https://www.paolointerno.com/#gallery",
+        "name": "Fantasy Landscape Illustration Portfolio — Paolo Internò",
+        "url": "https://www.paolointerno.com/",
+        "author": { "@id": "https://www.paolointerno.com/#person" },
+        "hasPart": [
+          {
+            "@type": "ImageObject",
+            "name": "Forest",
+            "description": "A sprawling ancient forest bathed in diffuse light — fantasy landscape illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Forest.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "fantasy forest landscape illustration, environment art, digital painting"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Plains",
+            "description": "Wide-open grassland at golden hour — environment landscape illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Plains.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "plains environment illustration, golden hour landscape, fantasy art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Bone Maw",
+            "description": "A monumental beast-mouth cavern entrance — fantasy environment art by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Bone_Maw.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "fantasy cave environment art, dark fantasy illustration, game art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Ash Monolith",
+            "description": "A solitary ancient monolith rises from an ash-covered plain — landscape illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/ash-monolith.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "monolith landscape illustration, post-apocalyptic fantasy, environment art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Mana Breach",
+            "description": "An arcane rupture tears through a ruined landscape — fantasy landscape art by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/mana-breach.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "fantasy magic landscape art, arcane environment illustration, game art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Whispers from the Mireglass",
+            "description": "A reflective swamp with ghostly apparitions — landscape illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/whispers-from-the-mireglass.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "swamp landscape illustration, dark fantasy environment, atmospheric art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Heartroot Vault",
+            "description": "A vast underground root network forms a cathedral-like natural vault — environment illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/heartroot-vault.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "underground fantasy environment, root cavern illustration, dungeon art"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Stonespire Conclave",
+            "description": "Ancient seats grown from trees atop a mountain plateau at dusk — landscape environment art by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/stonespire-conclave.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "mountain landscape illustration, fantasy environment art, dusk scenery"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Paradox Hollow",
+            "description": "A spatially distorted desert where geometry defies logic — landscape illustration by Paolo Internò.",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/paradox-hollow.webp",
+            "encodingFormat": "image/webp",
+            "author": { "@id": "https://www.paolointerno.com/#person" },
+            "keywords": "surreal landscape illustration, fantasy desert art, distorted environment"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.paolointerno.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Paolo Internò available for commissions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Paolo Internò is currently open for commissions. He specialises in fantasy landscape and environment illustration for games and publishing. Contact him at studio@paolointerno.com to discuss your project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of illustration work does Paolo Internò do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Paolo Internò creates detailed, narrative-driven fantasy landscape illustrations and environment art, primarily for games (tabletop RPGs, video games) and publishing. He focuses on composition, lighting, and readability at multiple scales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I hire Paolo Internò as a freelance illustrator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach Paolo Internò by email at studio@paolointerno.com. He works with clients worldwide and is experienced in game and publishing production pipelines."
+            }
+          }
+        ]
+      }
     ]
   }
   </script>
-  <link rel="preload" as="image" href="assets/illustrations/Forest.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/illustrations/Forest.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -429,6 +573,33 @@
       .gallery-item{height:180px !important}
     }
 
+    /* ── FAQ section ── */
+    .faq-section{
+      background:var(--paper-mid);
+      border-top:1px solid var(--paper-dark);
+      padding:3rem 2.5rem;
+    }
+    .faq-inner{max-width:680px}
+    .faq-heading{
+      font-family:var(--font-serif);font-size:13px;font-weight:400;
+      letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);
+      margin-bottom:2rem;
+    }
+    .faq-item{margin-bottom:1.6rem;padding-bottom:1.6rem;border-bottom:1px solid var(--paper-dark)}
+    .faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .faq-item h3{
+      font-family:var(--font-serif);font-size:15px;font-weight:500;font-style:italic;
+      color:var(--ink);margin-bottom:.5rem;line-height:1.4;
+    }
+    .faq-item p{
+      font-family:var(--font-serif);font-size:13.5px;line-height:1.72;color:var(--ink-mid);
+    }
+    .faq-item a{color:var(--ink-mid);border-bottom:1px solid rgba(234,232,225,.2);transition:color var(--tr),border-color var(--tr)}
+    .faq-item a:hover{color:var(--ink);border-color:rgba(234,232,225,.5)}
+    @media(max-width:768px){
+      .faq-section{padding:2rem 1.4rem}
+    }
+
     /* ── Tablet/Desktop: layout driven by JS (applyGalleryLayout) ── */
   </style>
 </head>
@@ -467,7 +638,7 @@
 
       <h1 class="sr-only">Paolo Internò (Paolo Interno) — Landscape Illustrator &amp; Environment Artist</h1>
       <div class="sig-wrap">
-        <img src="assets/Signature.png" alt="Paolo Internò"
+        <img src="assets/Signature.png" alt="Paolo Internò — freelance landscape illustrator and environment artist"
           onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
         <span class="sig-fallback">Paolo Internò</span>
       </div>
@@ -534,74 +705,101 @@
     <div class="gallery-grid" id="galleryGrid" role="list">
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/Forest.jpg"
+        data-src="assets/illustrations/Forest.webp"
         data-title="Forest"
         data-desc="A sprawling ancient forest bathed in diffuse light.">
-        <img src="assets/illustrations/Forest.jpg" alt="Forest — fantasy landscape illustration by Paolo Internò" fetchpriority="high"/>
+        <picture>
+          <source srcset="assets/illustrations/Forest.webp" type="image/webp" fetchpriority="high" />
+          <img src="assets/illustrations/Forest.jpg" alt="Forest — fantasy landscape illustration by Paolo Internò" fetchpriority="high" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Forest</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/Plains.jpg"
+        data-src="assets/illustrations/Plains.webp"
         data-title="Plains"
         data-desc="Wide-open grassland at golden hour.">
-        <img src="assets/illustrations/Plains.jpg" alt="Plains — environment landscape illustration by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/Plains.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/Plains.jpg" alt="Plains — environment landscape illustration by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Plains</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/Bone_Maw.jpg"
+        data-src="assets/illustrations/Bone_Maw.webp"
         data-title="Bone Maw"
         data-desc="A monumental beast-mouth cavern entrance.">
-        <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw — fantasy environment art by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/Bone_Maw.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/Bone_Maw.jpg" alt="Bone Maw — fantasy environment art by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Bone Maw</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/ash-monolith.jpg"
+        data-src="assets/illustrations/ash-monolith.webp"
         data-title="Ash Monolith"
         data-desc="A solitary ancient monolith rises from an ash-covered plain.">
-        <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/ash-monolith.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Ash Monolith</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/mana-breach.jpg"
+        data-src="assets/illustrations/mana-breach.webp"
         data-title="Mana Breach"
         data-desc="An arcane rupture tears through a ruined landscape.">
-        <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach — fantasy landscape art by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/mana-breach.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach — fantasy landscape art by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Mana Breach</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/whispers-from-the-mireglass.jpg"
+        data-src="assets/illustrations/whispers-from-the-mireglass.webp"
         data-title="Whispers from the Mireglass"
         data-desc="A reflective swamp with ghostly apparitions.">
-        <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass — landscape illustration by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/whispers-from-the-mireglass.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass — landscape illustration by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Whispers from the Mireglass</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/heartroot-vault.jpg"
+        data-src="assets/illustrations/heartroot-vault.webp"
         data-title="Heartroot Vault"
         data-desc="A vast underground root network forms a cathedral-like natural vault.">
-        <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault — environment illustration by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/heartroot-vault.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault — environment illustration by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Heartroot Vault</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/stonespire-conclave.jpg"
+        data-src="assets/illustrations/stonespire-conclave.webp"
         data-title="Stonespire Conclave"
         data-desc="Ancient seats grown from trees atop a mountain plateau at dusk.">
-        <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave — landscape environment art by Paolo Internò" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/stonespire-conclave.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave — landscape environment art by Paolo Internò" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Stonespire Conclave</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/paradox-hollow.jpg"
+        data-src="assets/illustrations/paradox-hollow.webp"
         data-title="Paradox Hollow"
         data-desc="A spatially distorted desert where geometry defies logic.">
-        <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy"/>
+        <picture>
+          <source srcset="assets/illustrations/paradox-hollow.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
+        </picture>
         <div class="item-overlay"><span class="item-label">Paradox Hollow</span></div>
       </article>
 
@@ -637,6 +835,32 @@
     </a>
   </div>
 </div>
+
+<!-- FAQ section — supports FAQPage schema for Google rich results -->
+<section class="faq-section" aria-label="Frequently asked questions" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq-inner">
+    <h2 class="faq-heading">Commissions — FAQ</h2>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">Are you available for commissions?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes — currently open. Reach out at <a href="mailto:studio@paolointerno.com">studio@paolointerno.com</a> to discuss your project, timeline, and budget.</p>
+      </div>
+    </h3>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">What kind of illustration work do you do?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Detailed, narrative-driven fantasy landscape and environment illustration for games (tabletop RPGs, video games) and publishing. Focused on composition, lighting, and readability at multiple scales within production constraints.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">How can I hire you as a freelance illustrator?</h3>
+      <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Email <a href="mailto:studio@paolointerno.com">studio@paolointerno.com</a> with a brief description of your project. Paolo works with clients worldwide and is experienced with game and publishing production pipelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Legal notice -->
 <footer class="legal-notice">© 2026 <strong style="font-weight:400">Paolo Internò</strong> — Landscape Illustrator &amp; Environment Artist &nbsp;·&nbsp; paolointerno.com</footer>
