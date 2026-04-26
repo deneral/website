@@ -98,7 +98,7 @@
             "@type": "ImageObject",
             "name": "Forest",
             "description": "A sprawling ancient forest bathed in diffuse light — fantasy landscape illustration by Paolo Internò.",
-            "contentUrl": "https://www.paolointerno.com/assets/illustrations/forest.webp",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Forest.webp",
             "encodingFormat": "image/webp",
             "author": { "@id": "https://www.paolointerno.com/#person" },
             "keywords": "fantasy forest landscape illustration, environment art, digital painting"
@@ -107,7 +107,7 @@
             "@type": "ImageObject",
             "name": "Plains",
             "description": "Wide-open grassland at golden hour — environment landscape illustration by Paolo Internò.",
-            "contentUrl": "https://www.paolointerno.com/assets/illustrations/plains.webp",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Plains.webp",
             "encodingFormat": "image/webp",
             "author": { "@id": "https://www.paolointerno.com/#person" },
             "keywords": "plains environment illustration, golden hour landscape, fantasy art"
@@ -116,7 +116,7 @@
             "@type": "ImageObject",
             "name": "Bone Maw",
             "description": "A monumental beast-mouth cavern entrance — fantasy environment art by Paolo Internò.",
-            "contentUrl": "https://www.paolointerno.com/assets/illustrations/bone-maw.webp",
+            "contentUrl": "https://www.paolointerno.com/assets/illustrations/Bone_Maw.webp",
             "encodingFormat": "image/webp",
             "author": { "@id": "https://www.paolointerno.com/#person" },
             "keywords": "fantasy cave environment art, dark fantasy illustration, game art"
@@ -210,7 +210,7 @@
     ]
   }
   </script>
-  <link rel="preload" as="image" href="assets/illustrations/forest.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/illustrations/Forest.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -546,18 +546,18 @@
         display:flex;flex-direction:column;gap:.5rem;
         z-index:10;
       }
-      .lightbox-counter{font-size:9px;order:1}
-      .lightbox-title{font-size:16px;margin-bottom:0;order:2}
-      .lightbox-meta{margin-bottom:0;order:3}
       .lightbox-close-mobile{
-        display:block;order:4;
+        display:flex;order:1;
+        align-items:center;justify-content:flex-end;
         background:transparent;border:none;cursor:pointer;
-        text-align:left;font-family:var(--font-sans);
-        font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-        color:var(--ink-dim);padding:6px 0;
-        transition:color var(--tr);
+        font-family:var(--font-sans);font-size:18px;
+        color:var(--ink-dim);padding:0 0 6px 0;
+        transition:color var(--tr);line-height:1;
       }
       .lightbox-close-mobile:hover{color:var(--ink)}
+      .lightbox-counter{font-size:9px;order:2}
+      .lightbox-title{font-size:16px;margin-bottom:0;order:3}
+      .lightbox-meta{margin-bottom:0;order:4}
       .lightbox-desc{
         font-size:12px;line-height:1.6;order:5;
         display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
@@ -615,7 +615,7 @@
       <div class="lightbox-counter" id="lbCounter"></div>
       <div class="lightbox-title" id="lbTitle"></div>
       <div class="lightbox-meta" id="lbMeta"></div>
-      <button class="lightbox-close-mobile" id="lbCloseMobile" aria-label="Close">&#x2715; Close</button>
+      <button class="lightbox-close-mobile" id="lbCloseMobile" aria-label="Close">&#x2715;</button>
       <div class="lightbox-desc" id="lbDesc"></div>
       <div class="lightbox-divider"></div>
       <div class="lightbox-nav">
@@ -705,34 +705,34 @@
     <div class="gallery-grid" id="galleryGrid" role="list">
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/forest.webp"
+        data-src="assets/illustrations/Forest.webp"
         data-title="Forest"
         data-desc="A sprawling ancient forest bathed in diffuse light.">
         <picture>
-          <source srcset="assets/illustrations/forest.webp" type="image/webp" fetchpriority="high" />
-          <img src="assets/illustrations/forest.jpg" alt="Forest — fantasy landscape illustration by Paolo Internò" fetchpriority="high" />
+          <source srcset="assets/illustrations/Forest.webp" type="image/webp" fetchpriority="high" />
+          <img src="assets/illustrations/Forest.webp" alt="Forest — fantasy landscape illustration by Paolo Internò" fetchpriority="high" />
         </picture>
         <div class="item-overlay"><span class="item-label">Forest</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/plains.webp"
+        data-src="assets/illustrations/Plains.webp"
         data-title="Plains"
         data-desc="Wide-open grassland at golden hour.">
         <picture>
-          <source srcset="assets/illustrations/plains.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/plains.jpg" alt="plains — environment landscape illustration by Paolo Internò" loading="lazy" />
+          <source srcset="assets/illustrations/Plains.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/Plains.webp" alt="Plains — environment landscape illustration by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Plains</span></div>
       </article>
 
       <article class="gallery-item" role="listitem" tabindex="0"
-        data-src="assets/illustrations/bone-maw.webp"
+        data-src="assets/illustrations/Bone_Maw.webp"
         data-title="Bone Maw"
         data-desc="A monumental beast-mouth cavern entrance.">
         <picture>
-          <source srcset="assets/illustrations/bone-maw.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/bone-maw.jpg" alt="Bone Maw — fantasy environment art by Paolo Internò" loading="lazy" />
+          <source srcset="assets/illustrations/Bone_Maw.webp" type="image/webp" loading="lazy" />
+          <img src="assets/illustrations/Bone_Maw.webp" alt="Bone Maw — fantasy environment art by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Bone Maw</span></div>
       </article>
@@ -743,7 +743,7 @@
         data-desc="A solitary ancient monolith rises from an ash-covered plain.">
         <picture>
           <source srcset="assets/illustrations/ash-monolith.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/ash-monolith.jpg" alt="Ash Monolith — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
+          <img src="assets/illustrations/ash-monolith.webp" alt="Ash Monolith — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Ash Monolith</span></div>
       </article>
@@ -754,7 +754,7 @@
         data-desc="An arcane rupture tears through a ruined landscape.">
         <picture>
           <source srcset="assets/illustrations/mana-breach.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/mana-breach.jpg" alt="Mana Breach — fantasy landscape art by Paolo Internò" loading="lazy" />
+          <img src="assets/illustrations/mana-breach.webp" alt="Mana Breach — fantasy landscape art by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Mana Breach</span></div>
       </article>
@@ -765,7 +765,7 @@
         data-desc="A reflective swamp with ghostly apparitions.">
         <picture>
           <source srcset="assets/illustrations/whispers-from-the-mireglass.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/whispers-from-the-mireglass.jpg" alt="Whispers from the Mireglass — landscape illustration by Paolo Internò" loading="lazy" />
+          <img src="assets/illustrations/whispers-from-the-mireglass.webp" alt="Whispers from the Mireglass — landscape illustration by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Whispers from the Mireglass</span></div>
       </article>
@@ -776,7 +776,7 @@
         data-desc="A vast underground root network forms a cathedral-like natural vault.">
         <picture>
           <source srcset="assets/illustrations/heartroot-vault.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/heartroot-vault.jpg" alt="Heartroot Vault — environment illustration by Paolo Internò" loading="lazy" />
+          <img src="assets/illustrations/heartroot-vault.webp" alt="Heartroot Vault — environment illustration by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Heartroot Vault</span></div>
       </article>
@@ -787,7 +787,7 @@
         data-desc="Ancient seats grown from trees atop a mountain plateau at dusk.">
         <picture>
           <source srcset="assets/illustrations/stonespire-conclave.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/stonespire-conclave.jpg" alt="Stonespire Conclave — landscape environment art by Paolo Internò" loading="lazy" />
+          <img src="assets/illustrations/stonespire-conclave.webp" alt="Stonespire Conclave — landscape environment art by Paolo Internò" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Stonespire Conclave</span></div>
       </article>
@@ -798,7 +798,7 @@
         data-desc="A spatially distorted desert where geometry defies logic.">
         <picture>
           <source srcset="assets/illustrations/paradox-hollow.webp" type="image/webp" loading="lazy" />
-          <img src="assets/illustrations/paradox-hollow.jpg" alt="Paradox Hollow — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
+          <img src="assets/illustrations/paradox-hollow.webp" alt="Paradox Hollow — landscape illustration by Paolo Internò (Paolo Interno)" loading="lazy" />
         </picture>
         <div class="item-overlay"><span class="item-label">Paradox Hollow</span></div>
       </article>
@@ -904,7 +904,7 @@
   // ── Data ────────────────────────────────────────────────────────────────
   function getProcess(el) {
     try { const s=JSON.parse(el.dataset.process||'[]'); if(s.length) return s; } catch(e){}
-    return [{src:el.dataset.src, caption:'Final'}];
+    return [{src:el.dataset.src}];
   }
   const data = items.map((el,i) => ({
     i, src:el.dataset.src, title:el.dataset.title||'',
@@ -929,9 +929,16 @@
     lbScrollArea.innerHTML='';
     d.process.forEach(p => {
       const wrap=document.createElement('div'); wrap.className='lightbox-process-item';
-      const img=document.createElement('img'); img.src=p.src; img.alt=p.caption; img.loading='lazy';
-      const cap=document.createElement('div'); cap.className='lightbox-process-caption'; cap.textContent=p.caption;
-      wrap.append(img,cap); lbScrollArea.appendChild(wrap);
+      const img=document.createElement('img'); img.src=p.src; img.alt=d.title; img.loading='lazy';
+      // Left/right half click → prev/next
+      img.style.cursor='pointer';
+      img.addEventListener('click', e => {
+        e.stopPropagation();
+        const r=img.getBoundingClientRect();
+        navigate(e.clientX-r.left < r.width/2 ? -1 : 1);
+      });
+      wrap.appendChild(img);
+      lbScrollArea.appendChild(wrap);
     });
     lbScrollArea.scrollTop=0;
   }
@@ -985,14 +992,22 @@
     else if (e.key==='Escape') closeLb();
   });
 
-  // Touch swipe
-  let _tx=null;
-  lbScrollArea.addEventListener('touchstart', e=>{_tx=e.touches[0].clientX;},{passive:true});
-  lbScrollArea.addEventListener('touchend', e=>{
+  // Click on scroll-area background (outside image) → close
+  lbScrollArea.addEventListener('click', e => {
+    if (e.target === lbScrollArea || e.target.classList.contains('lightbox-process-item')) closeLb();
+  });
+
+  // Unified touch swipe — full lightbox (covers both image and background)
+  let _tx=null, _ty=null;
+  lb.addEventListener('touchstart', e=>{
+    _tx=e.touches[0].clientX; _ty=e.touches[0].clientY;
+  },{passive:true});
+  lb.addEventListener('touchend', e=>{
     if(_tx===null) return;
     const dx=e.changedTouches[0].clientX-_tx;
-    if(Math.abs(dx)>50) navigate(dx<0?1:-1);
-    _tx=null;
+    const dy=Math.abs(e.changedTouches[0].clientY-_ty);
+    if(Math.abs(dx)>50 && dy<60) navigate(dx<0?1:-1);
+    _tx=null; _ty=null;
   },{passive:true});
 
 </script>
