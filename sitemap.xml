@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.paolointerno.com/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/forest.webp</image:loc>
+      <image:title>Forest — Fantasy Landscape Illustration by Paolo Internò</image:title>
+      <image:caption>A sprawling ancient forest bathed in diffuse light. Digital painting, 2026.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/plains.webp</image:loc>
+      <image:title>Plains — Environment Landscape Illustration by Paolo Internò</image:title>
+      <image:caption>Wide-open grassland at golden hour. Digital painting, 2026.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/bone-maw.webp</image:loc>
+      <image:title>Bone Maw — Fantasy Environment Art by Paolo Internò</image:title>
+      <image:caption>A monumental beast-mouth cavern entrance. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/ash-monolith.webp</image:loc>
+      <image:title>Ash Monolith — Landscape Illustration by Paolo Internò</image:title>
+      <image:caption>A solitary ancient monolith rises from an ash-covered plain. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/mana-breach.webp</image:loc>
+      <image:title>Mana Breach — Fantasy Landscape Art by Paolo Internò</image:title>
+      <image:caption>An arcane rupture tears through a ruined landscape. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/whispers-from-the-mireglass.webp</image:loc>
+      <image:title>Whispers from the Mireglass — Landscape Illustration by Paolo Internò</image:title>
+      <image:caption>A reflective swamp with ghostly apparitions. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/heartroot-vault.webp</image:loc>
+      <image:title>Heartroot Vault — Environment Illustration by Paolo Internò</image:title>
+      <image:caption>A vast underground root network forms a cathedral-like natural vault. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/stonespire-conclave.webp</image:loc>
+      <image:title>Stonespire Conclave — Landscape Environment Art by Paolo Internò</image:title>
+      <image:caption>Ancient seats grown from trees atop a mountain plateau at dusk. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/paradox-hollow.webp</image:loc>
+      <image:title>Paradox Hollow — Landscape Illustration by Paolo Internò</image:title>
+      <image:caption>A spatially distorted desert where geometry defies logic. Digital painting, 2025.</image:caption>
+    </image:image>
   </url>
 </urlset>
