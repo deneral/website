@@ -40,7 +40,7 @@ const PAINTINGS = [
         src: 'assets/illustrations/forest_final.webp',
       },
       {
-        label: 'Value Study',
+        label: 'Drawing',
         src: 'assets/illustrations/forest_drawing.webp',
       },
       {
@@ -74,7 +74,7 @@ const PAINTINGS = [
   {
     id: 'umbral-rift',
     title: 'Umbral Rift',
-    year: '2025',
+    year: '2026',
     medium: 'Digital painting',
     desc: 'A monumental beast-mouth cavern entrance.',
     thumbnail: 'assets/illustrations/umbral_rift_final.webp',
@@ -96,7 +96,7 @@ const PAINTINGS = [
   {
     id: 'ash-monolith',
     title: 'Ash Monolith',
-    year: '2024',
+    year: '2025',
     medium: 'Digital painting',
     desc: 'A solitary ancient monolith rises from an ash-covered plain.',
     thumbnail: 'assets/illustrations/ash-monolith_final.webp',
@@ -118,7 +118,7 @@ const PAINTINGS = [
   {
     id: 'mana-breach',
     title: 'Mana Breach',
-    year: '2024',
+    year: '2025',
     medium: 'Digital painting',
     desc: 'An arcane rupture tears through a ruined landscape.',
     thumbnail: 'assets/illustrations/mana-breach_final.webp',
@@ -184,7 +184,7 @@ const PAINTINGS = [
   {
     id: 'paradox-hollow',
     title: 'Paradox Hollow',
-    year: '2024',
+    year: '2025',
     medium: 'Digital painting',
     desc: 'A spatially distorted desert where geometry defies logic.',
     thumbnail: 'assets/illustrations/paradox-hollow_final.webp',
