@@ -99,11 +99,19 @@ const PAINTINGS = [
     year: '2024',
     medium: 'Digital painting',
     desc: 'A solitary ancient monolith rises from an ash-covered plain.',
-    thumbnail: 'assets/illustrations/ash-monolith.webp',
+    thumbnail: 'assets/illustrations/ash-monolith_final.webp',
     stages: [
       {
         label: 'Final',
-        src: 'assets/illustrations/ash-monolith.webp',
+        src: 'assets/illustrations/ash-monolith_final.webp',
+      },
+      {
+        label: 'Drawing',
+        src: 'assets/illustrations/ash-monolith_drawing.webp',
+      },
+      {
+        label: 'Thumbnails',
+        src: 'assets/illustrations/ash-monolith_thumbs.webp',
       },
     ],
   },
@@ -113,11 +121,19 @@ const PAINTINGS = [
     year: '2024',
     medium: 'Digital painting',
     desc: 'An arcane rupture tears through a ruined landscape.',
-    thumbnail: 'assets/illustrations/mana-breach.webp',
+    thumbnail: 'assets/illustrations/mana-breach_final.webp',
     stages: [
       {
         label: 'Final',
-        src: 'assets/illustrations/mana-breach.webp',
+        src: 'assets/illustrations/mana-breach_final.webp',
+      },
+      {
+        label: 'Drawing',
+        src: 'assets/illustrations/mana-breach_drawing.webp',
+      },
+      {
+        label: 'Thumbnails',
+        src: 'assets/illustrations/mana-breach_thumbs.webp',
       },
     ],
   },
@@ -127,11 +143,19 @@ const PAINTINGS = [
     year: '2025',
     medium: 'Digital painting',
     desc: 'A reflective swamp with ghostly apparitions.',
-    thumbnail: 'assets/illustrations/whispers-from-the-mireglass.webp',
+    thumbnail: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
     stages: [
       {
         label: 'Final',
-        src: 'assets/illustrations/whispers-from-the-mireglass.webp',
+        src: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
+      },
+      {
+        label: 'Drawing',
+        src: 'assets/illustrations/whispers-from-the-mireglass_drawing.webp',
+      },
+      {
+        label: 'Thumbnails',
+        src: 'assets/illustrations/whispers-from-the-mireglass_thumbs.webp',
       },
     ],
   },
@@ -141,25 +165,19 @@ const PAINTINGS = [
     year: '2025',
     medium: 'Digital painting',
     desc: 'A vast underground root network forms a cathedral-like natural vault.',
-    thumbnail: 'assets/illustrations/heartroot-vault.webp',
+    thumbnail: 'assets/illustrations/heartroot-vault_final.webp',
     stages: [
       {
         label: 'Final',
-        src: 'assets/illustrations/heartroot-vault.webp',
+        src: 'assets/illustrations/heartroot-vault_final.webp',
       },
-    ],
-  },
-  {
-    id: 'stonespire-conclave',
-    title: 'Stonespire Conclave',
-    year: '2025',
-    medium: 'Digital painting',
-    desc: 'Ancient seats grown from trees atop a mountain plateau at dusk.',
-    thumbnail: 'assets/illustrations/stonespire-conclave.webp',
-    stages: [
       {
-        label: 'Final',
-        src: 'assets/illustrations/stonespire-conclave.webp',
+        label: 'Drawing',
+        src: 'assets/illustrations/heartroot-vault_drawing.webp',
+      },
+      {
+        label: 'Thumbnails',
+        src: 'assets/illustrations/heartroot-vault_thumbs.webp',
       },
     ],
   },
@@ -169,11 +187,19 @@ const PAINTINGS = [
     year: '2024',
     medium: 'Digital painting',
     desc: 'A spatially distorted desert where geometry defies logic.',
-    thumbnail: 'assets/illustrations/paradox-hollow.webp',
+    thumbnail: 'assets/illustrations/paradox-hollow_final.webp',
     stages: [
       {
         label: 'Final',
-        src: 'assets/illustrations/paradox-hollow.webp',
+        src: 'assets/illustrations/paradox-hollow_final.webp',
+      },
+      {
+        label: 'Drawing',
+        src: 'assets/illustrations/paradox-hollow_drawing.webp',
+      },
+      {
+        label: 'Thumbnails',
+        src: 'assets/illustrations/paradox-hollow_thumbs.webp',
       },
     ],
   },
