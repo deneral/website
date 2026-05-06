@@ -399,7 +399,7 @@ PAINTINGS.forEach((p, i) => {
       </picture>
       <figcaption>${p.title} — ${p.desc} ${p.medium} · ${p.year}.</figcaption>
     </figure>
-    <div class="item-overlay"><span class="item-label">${p.title}</span></div>`;
+    <div class="item-overlay"><span class="item-label" text-align=center>${p.title}</span></div>`;
   // Add has-process class when multiple stages exist
   if (p.stages && p.stages.length > 1) el.classList.add('has-process');
   grid.appendChild(el);
