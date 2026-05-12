@@ -49,39 +49,21 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/plains_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/plains_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/plains_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/plains_thumbs.webp',
-      },
+      }
     ],
   },
   {
     id: 'umbral-rift',
     title: 'Umbral Rift',
-    year: '2026',
+    year: '2025',
     medium: 'Digital painting',
     desc: 'A monumental beast-mouth cavern entrance.',
     thumbnail: 'assets/illustrations/umbral_rift_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/umbral_rift_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/umbral_rift_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/umbral_rift_thumbs.webp',
-      },
+      }
     ],
   },
   {
@@ -93,17 +75,8 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/ash-monolith_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/ash-monolith_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/ash-monolith_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/ash-monolith_thumbs.webp',
-      },
+      }
     ],
   },
   {
@@ -115,17 +88,8 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/mana-breach_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/mana-breach_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/mana-breach_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/mana-breach_thumbs.webp',
-      },
+      }
     ],
   },
   {
@@ -137,17 +101,8 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/whispers-from-the-mireglass_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/whispers-from-the-mireglass_thumbs.webp',
-      },
+      }
     ],
   },
   {
@@ -159,17 +114,8 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/heartroot-vault_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/heartroot-vault_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/heartroot-vault_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/heartroot-vault_thumbs.webp',
-      },
+      }
     ],
   },
   {
@@ -181,17 +127,21 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/paradox-hollow_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/paradox-hollow_final.webp',
-      },
+      }
+    ],
+  },
+  {
+    id: 'the-artifact-vault',
+    title: 'The Artifact Vault',
+    year: '2025',
+    medium: 'Digital painting',
+    desc: 'An old catacomb guarded by creepy spiders.',
+    thumbnail: 'assets/illustrations/the-artifact-vault_final.webp',
+    stages: [
       {
-        label: 'Drawing',
-        src: 'assets/illustrations/paradox-hollow_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/paradox-hollow_thumbs.webp',
-      },
+        src: 'assets/illustrations/the-artifact-vault_final.webp',
+      }
     ],
   },
 ];
