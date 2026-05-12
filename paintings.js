@@ -137,10 +137,10 @@ const PAINTINGS = [
     year: '2025',
     medium: 'Digital painting',
     desc: 'An old catacomb guarded by creepy spiders.',
-    thumbnail: 'assets/illustrations/the-artifact-vault_final.webp',
+    thumbnail: 'assets/illustrations/the_artifact_vault_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/the-artifact-vault_final.webp',
+        src: 'assets/illustrations/the_artifact_vault_final.webp',
       }
     ],
   },
