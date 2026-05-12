@@ -36,17 +36,8 @@ const PAINTINGS = [
     thumbnail: 'assets/illustrations/forest_final.webp',
     stages: [
       {
-        label: 'Final',
         src: 'assets/illustrations/forest_final.webp',
-      },
-      {
-        label: 'Drawing',
-        src: 'assets/illustrations/forest_drawing.webp',
-      },
-      {
-        label: 'Thumbnails',
-        src: 'assets/illustrations/forest_thumbs.webp',
-      },
+      }
     ],
   },
   {
