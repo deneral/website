@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.paolointerno.com/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +18,7 @@
     </image:image>
     <image:image>
       <image:loc>https://www.paolointerno.com/assets/illustrations/umbral_rift_final.webp</image:loc>
-      <image:title>Bone Maw — Fantasy Environment Art by Paolo Internò</image:title>
+      <image:title>Umbral Rift — Fantasy Environment Art by Paolo Internò</image:title>
       <image:caption>A monumental beast-mouth cavern entrance. Digital painting, 2026.</image:caption>
     </image:image>
     <image:image>
@@ -42,14 +42,14 @@
       <image:caption>A vast underground root network forms a cathedral-like natural vault. Digital painting, 2025.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.paolointerno.com/assets/illustrations/stonespire-conclave_final.webp</image:loc>
-      <image:title>Stonespire Conclave — Landscape Environment Art by Paolo Internò</image:title>
-      <image:caption>Ancient seats grown from trees atop a mountain plateau at dusk. Digital painting, 2025.</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://www.paolointerno.com/assets/illustrations/paradox-hollow_final.webp</image:loc>
       <image:title>Paradox Hollow — Landscape Illustration by Paolo Internò</image:title>
       <image:caption>A spatially distorted desert where geometry defies logic. Digital painting, 2025.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.paolointerno.com/assets/illustrations/the_artifact_vault_final.webp</image:loc>
+      <image:title>The Artifact Vault — Environment Illustration by Paolo Internò</image:title>
+      <image:caption>An old catacomb guarded by creepy spiders. Digital painting, 2025.</image:caption>
     </image:image>
   </url>
 </urlset>
