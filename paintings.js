@@ -32,11 +32,11 @@ const PAINTINGS = [
     title: 'Forest',
     year: '2026',
     medium: 'Digital painting',
-    desc: 'A sprawling ancient forest bathed in diffuse light.',
-    thumbnail: 'assets/illustrations/forest_final.webp',
+    desc: 'A sprawling ancient forest bathed in light.',
+    thumbnail: 'assets/illustrations/forest_bloomborrow_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/forest_final.webp',
+        src: 'assets/illustrations/forest_bloomborrow_final.webp',
       }
     ],
   },
