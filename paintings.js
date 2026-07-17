@@ -11,6 +11,8 @@
  *    - year       : e.g. "2025"
  *    - medium     : e.g. "Digital painting"
  *    - desc       : short description shown in the lightbox panel
+ *    - seoCategory: short category tag used only for sitemap.xml image titles
+ *                   (e.g. "Landscape Illustration", "Fantasy Environment Art")
  *    - thumbnail  : the image shown in the gallery grid (usually the final piece)
  *    - stages     : array of process stages, shown in lightbox order
  *                   Each stage has:
@@ -29,6 +31,7 @@
 const PAINTINGS = [
   {
     id: 'forest',
+    seoCategory: 'Fantasy Landscape Illustration',
     title: 'Forest',
     year: '2026',
     medium: 'Digital painting',
@@ -42,6 +45,7 @@ const PAINTINGS = [
   },
   {
     id: 'plains',
+    seoCategory: 'Environment Landscape Illustration',
     title: 'Plains',
     year: '2026',
     medium: 'Digital painting',
@@ -54,7 +58,8 @@ const PAINTINGS = [
     ],
   },
   {
-    id: 'umbral-rift',
+    id: 'umbral_rift',
+    seoCategory: 'Fantasy Environment Art',
     title: 'Umbral Rift',
     year: '2025',
     medium: 'Digital painting',
@@ -67,72 +72,78 @@ const PAINTINGS = [
     ],
   },
   {
-    id: 'ash-monolith',
+    id: 'ash_monolith',
+    seoCategory: 'Landscape Illustration',
     title: 'Ash Monolith',
     year: '2025',
     medium: 'Digital painting',
     desc: 'A solitary ancient monolith rises from an ash-covered plain.',
-    thumbnail: 'assets/illustrations/ash-monolith_final.webp',
+    thumbnail: 'assets/illustrations/ash_monolith_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/ash-monolith_final.webp',
+        src: 'assets/illustrations/ash_monolith_final.webp',
       }
     ],
   },
   {
-    id: 'mana-breach',
+    id: 'mana_breach',
+    seoCategory: 'Fantasy Landscape Art',
     title: 'Mana Breach',
     year: '2025',
     medium: 'Digital painting',
     desc: 'An arcane rupture tears through a ruined landscape.',
-    thumbnail: 'assets/illustrations/mana-breach_final.webp',
+    thumbnail: 'assets/illustrations/mana_breach_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/mana-breach_final.webp',
+        src: 'assets/illustrations/mana_breach_final.webp',
       }
     ],
   },
   {
-    id: 'whispers-from-the-mireglass',
+    id: 'whispers_from_the_mireglass',
+    seoCategory: 'Landscape Illustration',
     title: 'Whispers from the Mireglass',
     year: '2025',
     medium: 'Digital painting',
     desc: 'A reflective swamp with ghostly apparitions.',
-    thumbnail: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
+    thumbnail: 'assets/illustrations/whispers_from_the_mireglass_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/whispers-from-the-mireglass_final.webp',
+        src: 'assets/illustrations/whispers_from_the_mireglass_final.webp',
       }
     ],
   },
   {
-    id: 'heartroot-vault',
+    id: 'heartroot_vault',
+    seoCategory: 'Environment Illustration',
     title: 'Heartroot Vault',
     year: '2025',
     medium: 'Digital painting',
     desc: 'A vast underground root network forms a cathedral-like natural vault.',
-    thumbnail: 'assets/illustrations/heartroot-vault_final.webp',
+    thumbnail: 'assets/illustrations/heartroot_vault_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/heartroot-vault_final.webp',
+        src: 'assets/illustrations/heartroot_vault_final.webp',
       }
     ],
   },
   {
-    id: 'paradox-hollow',
+    id: 'paradox_hollow',
+    seoCategory: 'Landscape Illustration',
     title: 'Paradox Hollow',
     year: '2025',
     medium: 'Digital painting',
     desc: 'A spatially distorted desert where geometry defies logic.',
-    thumbnail: 'assets/illustrations/paradox-hollow_final.webp',
+    thumbnail: 'assets/illustrations/paradox_hollow_final.webp',
     stages: [
       {
-        src: 'assets/illustrations/paradox-hollow_final.webp',
+        src: 'assets/illustrations/paradox_hollow_final.webp',
       }
     ],
   },
   {
-    id: 'the-artifact-vault',
+    id: 'the_artifact_vault',
+    seoCategory: 'Environment Illustration',
     title: 'The Artifact Vault',
     year: '2025',
     medium: 'Digital painting',
@@ -145,3 +156,10 @@ const PAINTINGS = [
     ],
   },
 ];
+
+// Node export (build scripts, e.g. scripts/generate-sitemap.js). No-op in the
+// browser, where PAINTINGS is used directly as a global — this file is still
+// loaded there via a plain <script src="paintings.js"> tag.
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = PAINTINGS;
+}
