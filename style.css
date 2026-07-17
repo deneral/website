@@ -16,13 +16,13 @@
 }
 
 :root {
-  --ink: #2b2823;
-  --ink-mid: #4d4841;
-  --ink-light: #6e685f;
-  --ink-dim: #8f897e;
-  --paper: #faf9f5;
-  --paper-dark: #e6e2d6;
-  --paper-mid: #f1efe6;
+  --ink: #eae8e1;
+  --ink-mid: #d4d0c5;
+  --ink-light: #b7b3a6;
+  --ink-dim: #9c9a95;
+  --paper: #272624;
+  --paper-dark: #161514;
+  --paper-mid: #1e1c1b;
   --sidebar-w: 270px;
   --font-serif: 'EB Garamond', Georgia, serif;
   --font-sans: 'DM Sans', sans-serif;
@@ -238,7 +238,7 @@ a {
 .contact-email-row {
   display: flex;
   align-items: stretch;
-  border: 1px solid rgba(43, 40, 35, .14);
+  border: 1px solid rgba(234, 232, 225, .12);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: .55rem;
@@ -246,15 +246,15 @@ a {
 }
 
 .contact-email-row:hover {
-  border-color: rgba(43, 40, 35, .28)
+  border-color: rgba(234, 232, 225, .25)
 }
 
 .contact-email-label {
-  background: rgba(43, 40, 35, .035);
+  background: rgba(255, 255, 255, .04);
   padding: .55rem .75rem;
   display: flex;
   align-items: center;
-  border-right: 1px solid rgba(43, 40, 35, .1);
+  border-right: 1px solid rgba(234, 232, 225, .08);
   flex-shrink: 0
 }
 
@@ -284,8 +284,8 @@ a {
   display: block;
   width: 100%;
   padding: .65rem 1rem;
-  background: rgba(43, 40, 35, .045);
-  border: 1px solid rgba(43, 40, 35, .12);
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(234, 232, 225, .1);
   border-radius: var(--radius);
   color: var(--ink-mid);
   font-family: var(--font-sans);
@@ -298,9 +298,9 @@ a {
 }
 
 .contact-cta:hover {
-  background: rgba(43, 40, 35, .08);
+  background: rgba(255, 255, 255, .09);
   color: var(--ink);
-  border-color: rgba(43, 40, 35, .25)
+  border-color: rgba(234, 232, 225, .22)
 }
 
 .sidebar-caption-area {
@@ -354,7 +354,7 @@ a {
 }
 
 .sidebar-nav-btn:hover {
-  background: rgba(43, 40, 35, .055);
+  background: rgba(255, 255, 255, .05);
   color: var(--ink)
 }
 
@@ -406,14 +406,14 @@ a {
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
-  border: 1px solid rgba(43, 40, 35, 0);
+  border: 1px solid rgba(234, 232, 225, 0);
   transition: border-color .25s ease;
   pointer-events: none;
   z-index: 2
 }
 
 .gallery-item:hover::after {
-  border-color: rgba(43, 40, 35, .18)
+  border-color: rgba(234, 232, 225, .15)
 }
 
 .item-overlay {
@@ -429,7 +429,7 @@ a {
 }
 
 .gallery-item:focus-visible {
-  outline: 2px solid rgba(43, 40, 35, .45);
+  outline: 2px solid rgba(234, 232, 225, .4);
   outline-offset: 2px
 }
 
@@ -468,13 +468,6 @@ a {
 }
 
 .lightbox {
-  --ink: #eae8e1;
-  --ink-mid: #d4d0c5;
-  --ink-light: #b7b3a6;
-  --ink-dim: #9c9a95;
-  --paper: #272624;
-  --paper-dark: #161514;
-  --paper-mid: #1e1c1b;
   position: fixed;
   inset: 0;
   z-index: 500;
