@@ -35,7 +35,10 @@ function today() {
 }
 
 function buildImageBlock(p) {
-  const url = `${SITE_URL}/${p.thumbnail}`;
+  // Use the largest on-page version (the lightbox image) rather than the
+  // compressed grid thumbnail, so Google Images indexes the better copy.
+  const imageSrc = (p.stages && p.stages[0] && p.stages[0].src) || p.thumbnail;
+  const url = `${SITE_URL}/${imageSrc}`;
   const title = `${p.title} — ${p.seoCategory} by Paolo Internò`;
   const caption = `${p.desc} ${p.medium}, ${p.year}.`;
   return [
