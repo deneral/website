@@ -38,7 +38,7 @@ const PAINTINGS = [
     year: '2026',
     medium: 'Digital painting',
     desc: 'A sprawling ancient forest bathed in light.',
-    thumbnail: 'assets/illustrations/forest_bloomburrow_final.webp',
+    thumbnail: 'assets/illustrations/forest_bloomborrow_final.webp',
   },
   {
     id: 'plains',
@@ -53,7 +53,7 @@ const PAINTINGS = [
     id: 'umbral_rift',
     seoCategory: 'Fantasy Environment Art',
     title: 'Umbral Rift',
-    year: '2025',
+    year: '2026',
     medium: 'Digital painting',
     desc: 'A monumental beast-mouth cavern entrance.',
     thumbnail: 'assets/illustrations/umbral_rift_final.webp',
