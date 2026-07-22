@@ -1,10 +1,10 @@
 /**
  * style.css — Paolo Internò portfolio
  *
- * Palette: light, near-white site background. The lightbox (image viewer)
- * intentionally stays on the old dark palette — it re-declares --ink/--paper/
- * etc. locally on .lightbox, so artwork keeps a dark surround for contrast
- * while the rest of the site is light. Change tokens in :root to re-theme.
+ * Palette: warm, dark editorial theme used site-wide (not just the
+ * lightbox) — a deep umber background scale (--paper*), warm parchment
+ * ink tones (--ink*) for text, and a brass --accent for hover states.
+ * Change tokens in :root to re-theme.
  */
 
 *,
@@ -16,16 +16,17 @@
 }
 
 :root {
-  --ink: #eae8e1;
-  --ink-mid: #d4d0c5;
-  --ink-light: #b7b3a6;
-  --ink-dim: #9c9a95;
-  --paper: #272624;
-  --paper-dark: #161514;
-  --paper-mid: #1e1c1b;
+  --ink: #f4ece0;
+  --ink-mid: #d9c9b3;
+  --ink-light: #b39d80;
+  --ink-dim: #8c7d6b;
+  --paper: #201a14;
+  --paper-dark: #100c08;
+  --paper-mid: #17120d;
+  --accent: #c89a4d;
   --sidebar-w: 270px;
-  --font-serif: 'EB Garamond', Georgia, serif;
-  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Manrope', sans-serif;
   --radius: 3px;
   --tr: 0.18s ease
 }
@@ -202,7 +203,7 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #7aaa5a;
+  background: #6fa168;
   flex-shrink: 0;
 }
 
@@ -216,7 +217,7 @@ a {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: rgba(122, 170, 90, .5);
+  background: rgba(111, 161, 104, .5);
   animation: pulse 2.8s ease-in-out infinite;
   z-index: -1
 }
@@ -238,7 +239,7 @@ a {
 .contact-email-row {
   display: flex;
   align-items: stretch;
-  border: 1px solid rgba(234, 232, 225, .12);
+  border: 1px solid rgba(244, 236, 224, .12);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: .55rem;
@@ -246,7 +247,7 @@ a {
 }
 
 .contact-email-row:hover {
-  border-color: rgba(234, 232, 225, .25)
+  border-color: rgba(244, 236, 224, .25)
 }
 
 .contact-email-label {
@@ -254,7 +255,7 @@ a {
   padding: .55rem .75rem;
   display: flex;
   align-items: center;
-  border-right: 1px solid rgba(234, 232, 225, .08);
+  border-right: 1px solid rgba(244, 236, 224, .08);
   flex-shrink: 0
 }
 
@@ -284,8 +285,8 @@ a {
   display: block;
   width: 100%;
   padding: .65rem 1rem;
-  background: rgba(255, 255, 255, .05);
-  border: 1px solid rgba(234, 232, 225, .1);
+  background: rgba(200, 154, 77, .08);
+  border: 1px solid rgba(244, 236, 224, .1);
   border-radius: var(--radius);
   color: var(--ink-mid);
   font-family: var(--font-sans);
@@ -298,9 +299,9 @@ a {
 }
 
 .contact-cta:hover {
-  background: rgba(255, 255, 255, .09);
+  background: rgba(200, 154, 77, .12);
   color: var(--ink);
-  border-color: rgba(234, 232, 225, .22)
+  border-color: rgba(244, 236, 224, .22)
 }
 
 .sidebar-caption-area {
@@ -354,7 +355,7 @@ a {
 }
 
 .sidebar-nav-btn:hover {
-  background: rgba(255, 255, 255, .05);
+  background: rgba(200, 154, 77, .08);
   color: var(--ink)
 }
 
@@ -406,20 +407,20 @@ a {
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
-  border: 1px solid rgba(234, 232, 225, 0);
+  border: 1px solid rgba(244, 236, 224, 0);
   transition: border-color .25s ease;
   pointer-events: none;
   z-index: 2
 }
 
 .gallery-item:hover::after {
-  border-color: rgba(234, 232, 225, .15)
+  border-color: rgba(244, 236, 224, .15)
 }
 
 .item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(22, 21, 20, .75) 0%, transparent 52%);
+  background: linear-gradient(to top, rgba(16, 12, 8, .75) 0%, transparent 52%);
   opacity: 0;
   transition: opacity .25s ease;
   display: flex;
@@ -429,7 +430,7 @@ a {
 }
 
 .gallery-item:focus-visible {
-  outline: 2px solid rgba(234, 232, 225, .4);
+  outline: 2px solid rgba(244, 236, 224, .4);
   outline-offset: 2px
 }
 
@@ -445,7 +446,7 @@ a {
   font-family: var(--font-serif);
   font-size: 13.5px;
   font-style: italic;
-  color: rgba(234, 232, 225, .94)
+  color: rgba(244, 236, 224, .94)
 }
 
 @keyframes fadeUp {
@@ -485,7 +486,7 @@ a {
 .lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(14, 13, 12, .95);
+  background: rgba(16, 12, 8, .95);
   cursor: zoom-out
 }
 
@@ -634,7 +635,7 @@ a {
 }
 
 .lightbox-nav-btn:hover {
-  background: rgba(255, 255, 255, .05);
+  background: rgba(200, 154, 77, .08);
   color: var(--ink)
 }
 
