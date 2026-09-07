@@ -27,7 +27,7 @@ const PAINTINGS = [
     medium: "Digital painting",
     desc: "Wide-open grassland at golden hour.",
     images: [
-      { src: "assets/illustrations/plains_final.webp" },
+      { src: "assets/illustrations/Plains_Dominaria.jpg" },
     ],
   },
   {
