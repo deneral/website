@@ -20,7 +20,7 @@ const PAINTINGS = [
     ],
   },
   {
-    id: "plains",
+    id: "plains_dominaria",
     seoCategory: "Environment Landscape Illustration",
     title: "Plains",
     year: "2026",
@@ -64,14 +64,14 @@ const PAINTINGS = [
     ],
   },
   {
-    id: "the_artifact_vault",
+    id: "plains",
     seoCategory: "Environment Illustration",
-    title: "The Artifact Vault",
+    title: "Plains",
     year: "2025",
     medium: "Digital painting",
-    desc: "An old catacomb guarded by creepy spiders.",
+    desc: "A field bathed in the light of the near sun.",
     images: [
-      { src: "assets/illustrations/the_artifact_vault_final.webp" },
+      { src: "assets/illustrations/Plains.jpg" },
     ],
   },
 ];
