@@ -8,9 +8,11 @@
 
 
 /* ── Build gallery from PAINTINGS data ── */
+// images[0] is always the cover — mirrors editor.html's model exactly.
 const grid = document.getElementById('galleryGrid');
 PAINTINGS.forEach((p, i) => {
   const isFirst = i === 0;
+  const cover = p.images[0].src;
   const el = document.createElement('article');
   el.className = 'gallery-item';
   el.setAttribute('role', 'button');
@@ -18,8 +20,8 @@ PAINTINGS.forEach((p, i) => {
   el.innerHTML = `
     <figure>
       <picture>
-        <source srcset="${p.thumbnail}" type="image/webp"${isFirst ? '' : ''} />
-        <img src="${p.thumbnail}" alt="${p.title} — illustration by Paolo Internò"${isFirst ? ' fetchpriority="high"' : ' loading="lazy"'} />
+        <source srcset="${cover}" type="image/webp"${isFirst ? '' : ''} />
+        <img src="${cover}" alt="${p.title} — illustration by Paolo Internò"${isFirst ? ' fetchpriority="high"' : ' loading="lazy"'} />
       </picture>
       <figcaption>${p.title} — ${p.desc} ${p.medium} · ${p.year}.</figcaption>
     </figure>
@@ -29,65 +31,44 @@ PAINTINGS.forEach((p, i) => {
 });
 
 /* ── Gallery layout ── */
+// Two items per row, widths alternating per row for an editorial (non-uniform)
+// rhythm — an odd item left over fills its row alone. Below 768px, CSS forces
+// a single full-width column per row and these inline styles are cleared.
 const items = Array.from(document.querySelectorAll('.gallery-item'));
-const DESKTOP_ROW_H = 300, TABLET_ROW_H = 240;
-const desktopPatterns = [[55,25,20],[40,35,25],[30,40,30],[25,50,25]];
-const desktopPair = [58,42];
-const tabletPairs = [['62%','38%'],['38%','62%']];
+const ROW_PAIRS = [[60, 40], [38, 62], [52, 48], [43, 57]];
+const GAP = 10;
 
-// Row-based patterns need a full group to look balanced. Any leftover items
-// (count not divisible by 3 on desktop, or not paired on tablet) are widened
-// to fill their row completely instead of leaving dead space — so the grid
-// stays balanced no matter how many illustrations are added.
 function applyGalleryLayout() {
-  const w = window.innerWidth;
   const n = items.length;
-  const styles = [];
-  if (w > 1100) {
-    const total = desktopPatterns[0].reduce((a,b) => a+b, 0);
-    const fullRows = Math.floor(n/3), remainder = n%3;
-    for (let i = 0; i < fullRows*3; i++) {
-      const row = Math.floor(i/3), col = i%3;
-      const ratios = desktopPatterns[row % desktopPatterns.length];
-      const pct = (ratios[col]/total*100).toFixed(2);
-      styles.push({el:items[i], width:'calc('+pct+'% - 7px)', height:DESKTOP_ROW_H+'px', flex:'0 0 calc('+pct+'% - 7px)'});
-    }
-    if (remainder === 1) {
-      styles.push({el:items[n-1], width:'100%', height:DESKTOP_ROW_H+'px', flex:'0 0 100%'});
-    } else if (remainder === 2) {
-      [n-2, n-1].forEach((idx, col) => {
-        const pct = desktopPair[col];
-        styles.push({el:items[idx], width:'calc('+pct+'% - 7px)', height:DESKTOP_ROW_H+'px', flex:'0 0 calc('+pct+'% - 7px)'});
-      });
-    }
-  } else if (w >= 769) {
-    styles.push({el:items[0], width:'100%', height:TABLET_ROW_H+'px', flex:'none'});
-    const rest = n-1, fullPairs = Math.floor(rest/2);
-    for (let i = 1; i <= fullPairs*2; i++) {
-      const pi = i-1, pr = Math.floor(pi/2) % tabletPairs.length, pos = pi%2;
-      styles.push({el:items[i], width:'calc('+tabletPairs[pr][pos]+' - 5px)', height:TABLET_ROW_H+'px', flex:'none'});
-    }
-    if (rest % 2 === 1) {
-      styles.push({el:items[n-1], width:'100%', height:TABLET_ROW_H+'px', flex:'none'});
-    }
-  } else {
-    items.forEach(el => styles.push({el, width:'', height:'', flex:''}));
+  if (window.innerWidth <= 768) {
+    items.forEach(el => { el.style.width = ''; el.style.flex = ''; });
+    return;
   }
-  requestAnimationFrame(() => {
-    items.forEach(el => { el.style.width=''; el.style.height=''; el.style.flex=''; });
-    styles.forEach(({el,width,height,flex}) => { el.style.width=width; el.style.height=height; el.style.flex=flex; });
-  });
+  const fullPairs = Math.floor(n / 2), remainder = n % 2;
+  for (let i = 0; i < fullPairs * 2; i++) {
+    const row = Math.floor(i / 2), col = i % 2;
+    const pct = ROW_PAIRS[row % ROW_PAIRS.length][col];
+    const width = 'calc(' + pct + '% - ' + (GAP / 2) + 'px)';
+    items[i].style.width = width;
+    items[i].style.flex = '0 0 ' + width;
+  }
+  if (remainder) {
+    items[n - 1].style.width = '100%';
+    items[n - 1].style.flex = '0 0 100%';
+  }
 }
 applyGalleryLayout();
 let _rt;
 window.addEventListener('resize', () => { clearTimeout(_rt); _rt = setTimeout(applyGalleryLayout, 120); });
 
 /* ── Lightbox ── */
+// Same images array the gallery grid used — every entry becomes a slide,
+// in order, exactly as arranged in editor.html.
 const data = PAINTINGS.map((p, i) => ({
   i, title: p.title,
   meta: p.medium + ' · ' + p.year,
   desc: p.desc,
-  stages: p.stages || [{ src: p.thumbnail }],
+  images: p.images,
   el: items[i]
 }));
 
@@ -104,7 +85,7 @@ const sbTitl      = document.getElementById('sbTitle');
 const sbMeta      = document.getElementById('sbMeta');
 function buildScrollArea(d) {
   lbScrollArea.innerHTML = '';
-  d.stages.forEach((s, idx) => {
+  d.images.forEach((s, idx) => {
     const wrap = document.createElement('div');
     wrap.className = 'lightbox-process-item';
     const img = document.createElement('img');
